@@ -1,0 +1,23 @@
+#showcase {
+    background: url('https://www.tropicalsno.com/wp-content/uploads/2019/02/Banner-1-2-t-768x420.png') center/contain no-repeat, linear-gradient(to right, rgba(179, 233, 50, 0.8), rgba(142, 212, 221, 0.8),  rgba(244, 152, 66, 0.8));
+    min-height: 95vh;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+/* #showcase #header {
+    background-color: rgba($color-tertiary, 0.8);
+    width: 55%;
+    border-radius: 15px;
+    
+} */
+
+.bg-custom {
+    background-color: $color-primary!important;
+}
+#rAndM {
+  position: absolute;
+  top: 33%;
+  left: 40%;
+  transform: rotate(-15deg) translate(-50%, -50%);
+  animation: spinRight 1.3s ease-in;
+}

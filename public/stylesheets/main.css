@@ -1,0 +1,254 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0rem); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0rem); } }
+
+@keyframes spinRight {
+  0% {
+    opacity: 0;
+    transform: rotateX(180deg); }
+  50% { }
+  100% {
+    opacity: 1; } }
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  box-sizing: border-box; }
+
+.heading-secondary {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #21def8, blue);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: .2rem;
+  transition: all .2s; }
+  .heading-secondary:hover {
+    transform: skewY(2deg) skewX(15deg);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.heading-tertiary {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  background-image: linear-gradient(to right, #b3e932, green);
+  -webkit-background-clip: text;
+  color: transparent; }
+
+.paragraph {
+  font-size: 2rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 8rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1rem; }
+
+#floatingCards {
+  background: url("http://kansascitysnowcones.com/wp-content/uploads/2016/04/slider-background.png") center center/cover no-repeat;
+  height: 725px;
+  color: rgba(244, 152, 66, 0.8); }
+
+.floatingCard {
+  perspective: 240rem;
+  -moz-persepective: 240rem;
+  position: relative;
+  background: url("http://kansascitysnowcones.com/wp-content/uploads/2016/04/slider-background.png") center center/cover no-repeat; }
+
+.card-side {
+  background-color: orangered;
+  color: #fff;
+  font-size: 2rem;
+  transition: all 0.8s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden; }
+
+.card-side-front {
+  background-color: orangered;
+  height: 56rem; }
+
+.card-side-back {
+  height: 56rem;
+  transform: rotateY(180deg);
+  border-radius: 1.5rem; }
+
+.floatingCard:hover .card-side-front {
+  transform: rotateY(180deg); }
+
+.floatingCard:hover .card-side-back {
+  transform: rotateY(0); }
+
+.price {
+  font-size: 6.4rem;
+  color: white; }
+
+#floatingCards p {
+  font-size: 3.6rem; }
+
+#floatingOneBack {
+  background: linear-gradient(to bottom right, green, #b3e932); }
+
+#floatingTwoBack {
+  background: linear-gradient(to bottom right, blue, #21def8); }
+
+#floatingThreeBack {
+  background: linear-gradient(to bottom right, orange, #f49842); }
+
+#floatingOne {
+  background: url("https://www.tropicalsno.com/wp-content/uploads/2017/11/thumb_spill_small-214x300.png") bottom/cover no-repeat; }
+
+#floatingTwo {
+  background: url("https://www.tropicalsno.com/wp-content/uploads/2017/11/thumb_spill_medium-214x300.png") bottom/cover no-repeat; }
+
+#floatingThree {
+  background: url("https://www.tropicalsno.com/wp-content/uploads/2017/11/thumb_spill_large-214x300.png") bottom/cover no-repeat; }
+
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transition: all .2s;
+    outline-offset: 2rem; }
+    .composition__photo--p1 {
+      left: 0;
+      top: -2rem; }
+    .composition__photo--p2 {
+      right: 0;
+      top: 2rem; }
+    .composition__photo--p3 {
+      left: 20%;
+      top: 10rem; }
+    .composition__photo:hover {
+      outline: 1.5rem solid #21def8;
+      transform: scale(1.05) translateY(-0.5rem);
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+      z-index: 20; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.95);
+    z-index: 1; }
+
+iframe {
+  display: block;
+  text-align: center;
+  position: relative;
+  margin: 0 auto; }
+
+#showcase {
+  background: url("https://www.tropicalsno.com/wp-content/uploads/2019/02/Banner-1-2-t-768x420.png") center/contain no-repeat, linear-gradient(to right, rgba(179, 233, 50, 0.8), rgba(142, 212, 221, 0.8), rgba(244, 152, 66, 0.8));
+  min-height: 95vh;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+
+/* #showcase #header {
+    background-color: rgba($color-tertiary, 0.8);
+    width: 55%;
+    border-radius: 15px;
+    
+} */
+.bg-custom {
+  background-color: #21def8 !important; }
+
+#rAndM {
+  position: absolute;
+  top: 33%;
+  left: 40%;
+  transform: rotate(-15deg) translate(-50%, -50%);
+  animation: spinRight 1.3s ease-in; }
+
+nav a {
+  font-size: 1.6rem; }
+
+.navbar-brand {
+  font-size: 2rem; }
+
+.customRow {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .customRow:not(:last-child) {
+    margin-bottom: 8rem; }
+  .customRow::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .customRow [class^="col-"] {
+    float: left; }
+    .customRow [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .customRow .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .customRow .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .customRow .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .customRow .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .customRow .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+  .customRow .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
+
+#footer {
+  background-color: #b3e932; }
+
+#footer hr {
+  border-color: white;
+  border-width: .2rem;
+  width: 100%; }
+
+#footer h3 {
+  font-size: 2.5rem; }
+
+#footer p {
+  margin-bottom: 1rem;
+  font-size: 1.6rem; }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20vh;
+  min-height: 95vh;
+  max-height: 140vh; }

@@ -1,0 +1,17 @@
+{
+  "name": "tropical_sno_project",
+  "version": "1.0.0",
+  "description": "r&m tropical sno website",
+  "main": "app.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss public/stylesheets/main.css -w"
+  },
+  "author": "ryan talbert",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.16",
+    "node-sass": "^4.11.0"
+  }
+}

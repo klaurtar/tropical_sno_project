@@ -1,0 +1,68 @@
+#floatingCards {
+    background: url('http://kansascitysnowcones.com/wp-content/uploads/2016/04/slider-background.png') center center/cover no-repeat;
+    height: 725px;
+    color: rgba($color-tertiary, 0.8);
+  }
+  
+  .floatingCard {
+    perspective: 240rem;
+    -moz-persepective: 240rem;
+    position: relative;
+    background: url('http://kansascitysnowcones.com/wp-content/uploads/2016/04/slider-background.png') center center/cover no-repeat;
+  
+  }
+  .card-side {
+    background-color: orangered;
+    color: #fff;
+    font-size: 2rem;
+    
+    transition: all 0.8s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+  }
+  .card-side-front {
+    background-color: orangered;
+    height: 56rem;
+  }
+  .card-side-back {
+    height: 56rem;
+    transform: rotateY(180deg);
+    border-radius: 1.5rem;
+  }
+  .floatingCard:hover .card-side-front {
+    transform: rotateY(180deg);
+  }
+  .floatingCard:hover .card-side-back {
+    transform: rotateY(0);
+  }
+  .price {
+    font-size: 6.4rem;
+    color: white;
+  }
+  
+  #floatingCards p {
+    font-size: 3.6rem;
+  }
+  
+  #floatingOneBack {
+    background: linear-gradient(to bottom right, green, $color-secondary);
+  }
+  #floatingTwoBack {
+    background: linear-gradient(to bottom right, blue, $color-primary);
+  }
+  #floatingThreeBack {
+    background: linear-gradient(to bottom right, orange, $color-tertiary);
+  }
+  
+  #floatingOne {
+    background: url('https://www.tropicalsno.com/wp-content/uploads/2017/11/thumb_spill_small-214x300.png') bottom/cover no-repeat;
+  }
+  #floatingTwo {
+    background: url('https://www.tropicalsno.com/wp-content/uploads/2017/11/thumb_spill_medium-214x300.png') bottom/cover no-repeat;
+  }
+  #floatingThree {
+    background: url('https://www.tropicalsno.com/wp-content/uploads/2017/11/thumb_spill_large-214x300.png') bottom/cover no-repeat;
+  }
