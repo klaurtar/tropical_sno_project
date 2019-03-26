@@ -4,7 +4,6 @@
   "description": "r&m tropical sno website",
   "main": "app.js",
   "scripts": {
-    "start": "app.js",
     "compile:sass": "node-sass sass/main.scss public/stylesheets/main.css -w"
   },
   "author": "ryan talbert",
@@ -14,5 +13,8 @@
     "express": "^4.16.4",
     "mongoose": "^5.4.16",
     "node-sass": "^4.11.0"
+  },
+  "engines": {
+    "node": "10.x"
   }
 }
