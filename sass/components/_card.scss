@@ -1,14 +1,15 @@
 #floatingCards {
-    background: url('http://kansascitysnowcones.com/wp-content/uploads/2016/04/slider-background.png') center center/cover no-repeat;
+    background: url('/images/tropicalSnoLeafBlue.png') center center/cover no-repeat;
     height: 725px;
     color: rgba($color-tertiary, 0.8);
+    margin-top: 7rem;
   }
   
   .floatingCard {
     perspective: 240rem;
     -moz-persepective: 240rem;
     position: relative;
-    background: url('http://kansascitysnowcones.com/wp-content/uploads/2016/04/slider-background.png') center center/cover no-repeat;
+    background: url('/images/tropicalSnoLeafBlue.png') center center/cover no-repeat;
   
   }
   .card-side {

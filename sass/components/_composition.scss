@@ -39,20 +39,32 @@
         &--p1 {
             left: 0;
             top: -2rem;
+
+            &:hover {
+                outline: 1.5rem solid $color-primary;
+            }
         }
 
         &--p2 {
             right: 0;
             top: 2rem;
+            
+            &:hover {
+                outline: 1.5rem solid $color-secondary;
+            }
         }
 
         &--p3 {
             left: 20%;
             top: 10rem;
+
+            &:hover {
+                outline: 1.5rem solid $color-tertiary;
+            }
         }
 
         &:hover {
-            outline: 1.5rem solid $color-primary;
+            
             transform: scale(1.05) translateY(-.5rem);
             box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, .5);
             z-index: 20;

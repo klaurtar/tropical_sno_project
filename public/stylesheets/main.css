@@ -37,8 +37,10 @@ html {
   font-size: 62.5%; }
 
 body {
+  padding-top: 3rem;
   padding-left: 3rem;
   padding-right: 3rem;
+  padding-bottom: 3rem;
   box-sizing: border-box; }
 
 .heading-secondary {
@@ -81,16 +83,32 @@ body {
 .u-margin-bottom-small {
   margin-bottom: 1rem; }
 
+.bg-video {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: .7;
+  backface-visibility: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
 #floatingCards {
-  background: url("http://kansascitysnowcones.com/wp-content/uploads/2016/04/slider-background.png") center center/cover no-repeat;
+  background: url("/images/tropicalSnoLeafBlue.png") center center/cover no-repeat;
   height: 725px;
-  color: rgba(244, 152, 66, 0.8); }
+  color: rgba(244, 152, 66, 0.8);
+  margin-top: 7rem; }
 
 .floatingCard {
   perspective: 240rem;
   -moz-persepective: 240rem;
   position: relative;
-  background: url("http://kansascitysnowcones.com/wp-content/uploads/2016/04/slider-background.png") center center/cover no-repeat; }
+  background: url("/images/tropicalSnoLeafBlue.png") center center/cover no-repeat; }
 
 .card-side {
   background-color: orangered;
@@ -156,14 +174,19 @@ body {
     .composition__photo--p1 {
       left: 0;
       top: -2rem; }
+      .composition__photo--p1:hover {
+        outline: 1.5rem solid #21def8; }
     .composition__photo--p2 {
       right: 0;
       top: 2rem; }
+      .composition__photo--p2:hover {
+        outline: 1.5rem solid #b3e932; }
     .composition__photo--p3 {
       left: 20%;
       top: 10rem; }
+      .composition__photo--p3:hover {
+        outline: 1.5rem solid #f49842; }
     .composition__photo:hover {
-      outline: 1.5rem solid #21def8;
       transform: scale(1.05) translateY(-0.5rem);
       box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
       z-index: 20; }
@@ -176,6 +199,134 @@ iframe {
   text-align: center;
   position: relative;
   margin: 0 auto; }
+
+.header {
+  color: #f49842;
+  font-size: 5rem;
+  margin-bottom: 3rem;
+  font-weight: 700; }
+
+.supportingText {
+  color: #f49842;
+  font-size: 2.5rem; }
+
+#flavors {
+  padding-top: 20rem;
+  padding-bottom: 2rem;
+  background: linear-gradient(to bottom right, rgba(33, 222, 248, 0.5), rgba(25, 103, 180, 0.5)), url("/images/snowCone.jpg") center/cover no-repeat;
+  min-height: 90vh;
+  max-height: 130vh;
+  position: relative;
+  margin-top: -7.5rem;
+  transform: skewY(-7deg); }
+  #flavors .feature-box {
+    background-color: rgba(247, 247, 247, 0.5);
+    padding: 2.5rem;
+    height: 36rem;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transform: skewY(7deg); }
+    #flavors .feature-box p {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.3rem;
+      transition: all .1s; }
+      #flavors .feature-box p:hover {
+        transform: scale(2) skewY(-7deg); }
+  #flavors #comboContainer {
+    display: block; }
+  #flavors #comboDisplay {
+    background-color: rgba(244, 152, 66, 0.8);
+    border-radius: 3px;
+    display: block;
+    width: 40vw;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%); }
+    #flavors #comboDisplay span {
+      color: white;
+      font-size: 3rem;
+      text-decoration: underline; }
+    #flavors #comboDisplay #comboName {
+      color: white;
+      font-size: 2rem; }
+    #flavors #comboDisplay #flavorCombo {
+      color: white;
+      font-size: 2rem; }
+    #flavors #comboDisplay p {
+      font-weight: 700;
+      letter-spacing: 0.3rem; }
+  #flavors h3 {
+    font-size: 10rem;
+    color: white;
+    text-shadow: 7px 7px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%); }
+  #flavors h4 {
+    font-size: 2rem;
+    color: white;
+    display: inline-block;
+    position: absolute;
+    top: 13rem;
+    left: 50%;
+    transform: translateX(-50%); }
+
+.red {
+  color: rgba(0, 0, 0, 0.5); }
+  .red:hover {
+    color: red; }
+
+.pink {
+  color: rgba(0, 0, 0, 0.5); }
+  .pink:hover {
+    color: #ff69b4; }
+
+.yellow {
+  color: rgba(0, 0, 0, 0.5); }
+  .yellow:hover {
+    color: yellow; }
+
+.white {
+  color: rgba(0, 0, 0, 0.5); }
+  .white:hover {
+    color: snow; }
+
+.blue {
+  color: rgba(0, 0, 0, 0.5); }
+  .blue:hover {
+    color: blue; }
+
+.purple {
+  color: rgba(0, 0, 0, 0.5); }
+  .purple:hover {
+    color: purple; }
+
+.green {
+  color: rgba(0, 0, 0, 0.5); }
+  .green:hover {
+    color: lime; }
+
+.orange {
+  color: rgba(0, 0, 0, 0.5); }
+  .orange:hover {
+    color: orange; }
+
+.brown {
+  color: rgba(0, 0, 0, 0.5); }
+  .brown:hover {
+    color: #8B4513; }
+
+.darkRed {
+  color: rgba(0, 0, 0, 0.5); }
+  .darkRed:hover {
+    color: DarkRed; }
 
 #showcase {
   background: url("https://www.tropicalsno.com/wp-content/uploads/2019/02/Banner-1-2-t-768x420.png") center/contain no-repeat, linear-gradient(to right, rgba(179, 233, 50, 0.8), rgba(142, 212, 221, 0.8), rgba(244, 152, 66, 0.8));
@@ -199,11 +350,116 @@ iframe {
   transform: rotate(-15deg) translate(-50%, -50%);
   animation: spinRight 1.3s ease-in; }
 
-nav a {
-  font-size: 1.6rem; }
+.navigation__checkbox {
+  display: none; }
 
-.navbar-brand {
-  font-size: 2rem; }
+.navigation__button {
+  background-color: white;
+  height: 7rem;
+  width: 7rem;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  border-radius: 50%;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer; }
+
+.navigation__background {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  background-image: radial-gradient(#21def8, #b3e932);
+  z-index: 1000;
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
+
+.navigation__nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1500;
+  opacity: 0;
+  width: 0;
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+
+.navigation__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  width: 100%; }
+
+.navigation__item {
+  margin: 1rem; }
+
+.navigation__link:link, .navigation__link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 1rem 2rem;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+  background-size: 250%;
+  transition: all .6s; }
+  .navigation__link:link span, .navigation__link:visited span {
+    margin-right: 1rem;
+    display: inline-block; }
+
+.navigation__link:hover, .navigation__link:active {
+  background-position: 100%;
+  color: #f49842;
+  transform: translateX(1rem); }
+
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(80); }
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  width: 100%; }
+
+.navigation__icon {
+  position: relative;
+  margin-top: 3.5rem; }
+  .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+    width: 3rem;
+    height: 2px;
+    background-color: #525252;
+    display: inline-block; }
+  .navigation__icon::before, .navigation__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all .2s; }
+  .navigation__icon::before {
+    top: -.8rem; }
+  .navigation__icon::after {
+    top: .8rem; }
+
+.navigation__button:hover .navigation__icon::before {
+  top: -1rem; }
+
+.navigation__button:hover .navigation__icon::after {
+  top: 1rem; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon {
+  background-color: transparent; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+  top: 0;
+  transform: rotate(135deg); }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+  top: 0;
+  transform: rotate(-135deg); }
 
 .customRow {
   max-width: 114rem;
@@ -218,6 +474,8 @@ nav a {
     float: left; }
     .customRow [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
+  .customRow .column {
+    width: 100%; }
   .customRow .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .customRow .col-1-of-3 {
@@ -242,13 +500,81 @@ nav a {
 #footer h3 {
   font-size: 2.5rem; }
 
-#footer p {
+#footer .hoursPtag {
   margin-bottom: 1rem;
   font-size: 1.6rem; }
 
+.locations {
+  font-size: 2.5rem; }
+  .locations:not(:last-child) {
+    margin-bottom: 2.3rem; }
+
 .section-about {
   background-color: #f7f7f7;
-  padding: 25rem 0;
+  padding: 25rem 0 35rem 0;
   margin-top: -20vh;
   min-height: 95vh;
   max-height: 140vh; }
+
+.section-connect {
+  padding: 10rem 0 15rem 0;
+  height: 95vh;
+  position: relative; }
+  .section-connect span {
+    font-size: 6rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right, #21def8, blue);
+    -webkit-background-clip: text;
+    color: transparent;
+    padding-bottom: 15rem; }
+  .section-connect i {
+    font-size: 15rem;
+    opacity: .7; }
+
+.section-employment {
+  background: url("/images/tropicalSnoLeafBlue.png") center center/cover no-repeat;
+  padding: 0 15rem 6rem 15rem; }
+  .section-employment .margin {
+    margin-bottom: 6rem;
+    padding-top: 2rem; }
+  .section-employment .application {
+    width: 100%;
+    background-color: #b9b9b9e3;
+    border-radius: 15px;
+    font-color: black;
+    padding: 2rem; }
+    .section-employment .application .extraSpace:not(:last-child) {
+      margin-bottom: 4rem; }
+    .section-employment .application h2 {
+      text-align: center;
+      font-size: 5rem; }
+    .section-employment .application div .form {
+      display: block;
+      width: 100%;
+      height: 4rem;
+      padding: .375rem .75rem;
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #495057;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid #ced4da;
+      border-radius: 1rem; }
+    .section-employment .application div .radio {
+      display: flex;
+      height: 4rem;
+      font-size: 2rem; }
+      .section-employment .application div .radio input[type="radio"] {
+        transform: scale(1);
+        display: block;
+        margin-right: 1rem; }
+        .section-employment .application div .radio input[type="radio"]:not(:first-child) {
+          margin-left: 1rem; }
+    .section-employment .application div label {
+      font-size: 2rem;
+      margin-right: 3rem; }
+    .section-employment .application div:not(:last-child) {
+      margin-bottom: 1.5rem; }

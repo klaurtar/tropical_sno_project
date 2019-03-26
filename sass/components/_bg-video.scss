@@ -1,0 +1,17 @@
+.bg-video {
+    clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .7;
+    backface-visibility: hidden;
+
+    &__content {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}

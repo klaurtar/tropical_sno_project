@@ -10,6 +10,10 @@ app.get('/', function(req, res){
     res.render('index');
 });
 
+app.get('/employment', function(req, res){
+    res.render('employment');
+});
+
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
   });
