@@ -9,10 +9,14 @@
   "author": "ryan talbert",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "debug": "^4.1.1",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "mongoose": "^5.4.16",
-    "node-sass": "^4.11.0"
+    "mongoose": "^5.4.20",
+    "node-sass": "^4.11.0",
+    "nodemailer": "^6.0.0",
+    "nodemailer-mailgun-transport": "^1.4.0"
   },
   "engines": {
     "node": "10.x"

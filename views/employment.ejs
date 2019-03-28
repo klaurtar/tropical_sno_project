@@ -16,20 +16,20 @@
         <hr>
         <p class="sideNote">Fields marked with an asterisk (*) must be filled out before submitting.</p>
 
-        <form action="#">
+        <form action="/employment" method="POST">
             <div class="extraSpace">
                     <div class="form-row">
                             <div class="col-sm">
                                 <label for="">First Name*</label>
-                                <input type="text" name="" class="form" id="" placeholder="First Name">
+                                <input type="text" name="firstName" class="form" id="" placeholder="First Name">
                             </div>
                             <div class="col-1-sm">
                                 <label for="">M.I.</label>
-                                <input type="text" name="" class="form" id="" placeholder="Initial">
+                                <input type="text" name="middleInitial" class="form" id="" placeholder="Initial">
                             </div>
                             <div class="col-sm">
                                 <label for="">Last Name*</label>
-                                <input type="text" name="" class="form" id="" placeholder="Last Name">
+                                <input type="text" name="lastName" class="form" id="" placeholder="Last Name">
                             </div>
                     </div>
             </div>
@@ -38,22 +38,22 @@
                     <div class="form-row">
                             <div class="col">
                                 <label for="address">Address</label>
-                                <input type="text" class="form" placeholder="Address">
+                                <input type="text" class="form" placeholder="Address" name="address">
                             </div>
                         </div>
         
                         <div class="form-row">
                                 <div class="col-4">
                                         <label for="address">City</label>
-                                        <input type="text" class="form" placeholder="City">
+                                        <input type="text" class="form" placeholder="City" name="city">
                                     </div>
                                 <div class="col-4">
                                         <label for="address">State</label>
-                                        <input type="text" class="form" placeholder="State">
+                                        <input type="text" class="form" placeholder="State" name="state">
                                     </div>
                                     <div class="col-4">
                                         <label for="address">Zip Code</label>
-                                        <input type="text" class="form" placeholder="Zip Code">
+                                        <input type="text" class="form" placeholder="Zip Code" name="zipCode">
                                     </div>
                         </div>
             </div>
@@ -62,16 +62,16 @@
                     <div class="form-row">
                             <div class="col-6">
                                 <label for="phoneNumber">Phone Number</label>
-                                <input type="text" class="form" name="" id="" placeholder="Phone Number">
+                                <input type="text" class="form" name="phoneNumber" id="" placeholder="Phone Number">
                             </div>
                             <div class="col-6">
 
                                 <label for="text"> Do you recieve text messages?</label>
                                 <div class="radio justify-content-center" style="height: 4rem">
                                         
-                                        <input type="radio" id="radio1" class="align-self-center" name="text" value="yes">
+                                        <input type="radio" id="radio1" class="align-self-center" name="doYouRecieveText" value="yes">
                                         <label class="align-self-end" for="radio1">Yes</label> 
-                                        <input type="radio" id="radio2" class="align-self-center" name="text" value="no">
+                                        <input type="radio" id="radio2" class="align-self-center" name="doYouRecieveText" value="no">
                                         <label class="align-self-end" for="radio2">No</label> 
                                              
                                 </div>
@@ -79,7 +79,7 @@
                             </div>
                         </div>
             </div>
-                
+            <button class="btn btn-lg btn-success">Submit</button>
         </form>
     </div>
 </section>
