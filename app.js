@@ -1,6 +1,7 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
+var MongoClient = require('mongodb').MongoClient;
 var Applicant = require('./models/applicants');
 var sendAppliedEmail = require('./mail/index.js');
 
@@ -10,7 +11,18 @@ app.use(express.static(__dirname + "/public"));
 app.use(express.static(__dirname + '/js'));
 var port = process.env.PORT || 3000;
 
-mongoose.connect('mongodb+srv://klaurtar:Helloryan1@cluster0-nakj7.mongodb.net/test?retryWrites=true', {useNewUrlParser: true});
+
+
+
+var uri = "mongodb+srv://klaurtar:Helloryan1@cluster0-nakj7.mongodb.net/test?retryWrites=true";
+var client = new MongoClient(uri, { useNewUrlParser: true });
+client.connect(err => {
+  var collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
+
+// mongoose.connect('mongodb+srv://klaurtar:Helloryan1@cluster0-nakj7.mongodb.net/test?retryWrites=true', {useNewUrlParser: true});
 app.use(bodyParser.urlencoded({extended: true}));
 // Applicant.create({
     // firstName: 'Ryan',
