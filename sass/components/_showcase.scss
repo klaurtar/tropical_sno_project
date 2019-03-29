@@ -1,5 +1,5 @@
 #showcase {
-    background: url('https://www.tropicalsno.com/wp-content/uploads/2019/02/Banner-1-2-t-768x420.png') center/contain no-repeat, linear-gradient(to right, rgba(179, 233, 50, 0.8), rgba(142, 212, 221, 0.8),  rgba(244, 152, 66, 0.8));
+    background: url('https://www.tropicalsno.com/wp-content/uploads/2019/02/Banner-1-2-t-768x420.png') center/cover no-repeat, linear-gradient(to right, rgba(179, 233, 50, 0.8), rgba(142, 212, 221, 0.8),  rgba(244, 152, 66, 0.8));
     min-height: 95vh;
     position: relative;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
@@ -20,4 +20,25 @@
   left: 40%;
   transform: rotate(-15deg) translate(-50%, -50%);
   animation: spinRight 1.3s ease-in;
+
+  @include respond(tab-land) {
+    transform: rotate(-15deg) translate(-50%, -50%) scale(.9); 
+    position: absolute;
+    top: 35%;
+    left: 37%;
+  }
+  
+  @include respond(tab-port) {
+    transform: rotate(-15deg) translate(-50%, -50%) scale(.8); 
+    position: absolute;
+    top: 36%;
+    left: 33%;
+  }
+  
+  @include respond(phone) {
+    transform: rotate(-15deg) translate(-50%, -50%) scale(.7); 
+    position: absolute;
+    top: 33%;
+    left: 23%;   
+  }
 }

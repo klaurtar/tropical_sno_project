@@ -1,8 +1,15 @@
 #floatingCards {
     background: url('/images/tropicalSnoLeafBlue.png') center center/cover no-repeat;
-    height: 725px;
+    height: 110vh;
     color: rgba($color-tertiary, 0.8);
-    margin-top: 7rem;
+    margin-top: -9.5rem;
+    padding-top: 13rem;
+    padding-bottom: 20rem;
+    // padding-top: 50rem;
+
+    h2 {
+      font-size: 10rem;
+    }
   }
   
   .floatingCard {
@@ -18,20 +25,25 @@
     font-size: 2rem;
     
     transition: all 0.8s;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    
     backface-visibility: hidden;
   }
   .card-side-front {
     background-color: orangered;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 56rem;
   }
   .card-side-back {
-    height: 56rem;
+    height: 45rem;
     transform: rotateY(180deg);
     border-radius: 1.5rem;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    width: 100%;
   }
   .floatingCard:hover .card-side-front {
     transform: rotateY(180deg);
