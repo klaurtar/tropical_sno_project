@@ -58,6 +58,9 @@ body {
   padding-right: 3rem;
   padding-bottom: 3rem;
   box-sizing: border-box; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 .heading-secondary {
   font-size: 4rem;
@@ -243,6 +246,9 @@ iframe {
   position: relative;
   margin-top: -7.5rem;
   transform: skewY(-7deg); }
+  @media (max-width: 37.5em) {
+    #flavors .feature-box {
+      display: none; } }
   #flavors .feature-box {
     background-color: rgba(247, 247, 247, 0.5);
     padding: 2.5rem;

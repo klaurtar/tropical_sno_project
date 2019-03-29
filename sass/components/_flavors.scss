@@ -9,6 +9,12 @@
 
     transform: skewY(-7deg);
 
+    @include respond(phone) {
+        .feature-box {
+            display: none;
+        }
+      }
+
     .feature-box {
         background-color: rgba($color-grey-light-1, 0.5);
         padding: 2.5rem;
@@ -31,7 +37,7 @@
                 
             }            
         }
-        
+       
     }
     #comboContainer {
         display: block;
