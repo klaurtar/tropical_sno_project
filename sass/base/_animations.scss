@@ -40,3 +40,18 @@
       opacity: 1;
     }
   }
+
+  @keyframes hiddenDisplay {
+    0% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  
+    80% {
+      visibility: visible;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }

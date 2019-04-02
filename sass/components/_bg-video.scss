@@ -14,4 +14,15 @@
         width: 100%;
         object-fit: cover;
     }
+
+    @include respond(phone) {
+        clip-path: none;
+        
+
+        &__content {
+            // width: 80%;
+            // object-fit: cover;
+            // overflow: hidden;
+        }
+    }
 }

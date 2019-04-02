@@ -7,6 +7,19 @@
     padding-bottom: 20rem;
     // padding-top: 50rem;
 
+  @include respond(phone) {
+    height: 210vh;
+    
+      #cardTwo {
+        margin-top: 33rem;
+      }
+  
+      #cardThree {
+        margin-top: 37rem;
+      }
+
+  }
+
     h2 {
       font-size: 10rem;
     }
@@ -35,6 +48,11 @@
     left: 0;
     width: 100%;
     height: 56rem;
+
+    @include respond(phone) {
+      height: 50rem;
+    }
+
   }
   .card-side-back {
     height: 45rem;
@@ -58,24 +76,62 @@
   
   #floatingCards p {
     font-size: 3.6rem;
+
+    @include respond(phone) {
+      font-size: 4rem;
+      font-weight: 700;
+      text-decoration: underline;
+    }
   }
   
   #floatingOneBack {
     background: linear-gradient(to bottom right, green, $color-secondary);
+
+    @include respond(phone) {
+      top: 0;
+      height: 34rem;
+    }
   }
   #floatingTwoBack {
     background: linear-gradient(to bottom right, blue, $color-primary);
+
+    @include respond(phone) {
+      top: 1.5rem;
+      height: 38rem;
+    }
   }
   #floatingThreeBack {
     background: linear-gradient(to bottom right, orange, $color-tertiary);
+
+    @include respond(phone) {
+      top: 1rem;
+      height: 40rem;
+    }
   }
   
   #floatingOne {
     background: url('https://www.tropicalsno.com/wp-content/uploads/2017/11/thumb_spill_small-214x300.png') bottom/cover no-repeat;
+
+    @include respond(phone) {
+      top: -12rem;
+    }
+
   }
   #floatingTwo {
     background: url('https://www.tropicalsno.com/wp-content/uploads/2017/11/thumb_spill_medium-214x300.png') bottom/cover no-repeat;
+
+    @include respond(phone) {
+      top: -7rem;
+    }
+
   }
   #floatingThree {
     background: url('https://www.tropicalsno.com/wp-content/uploads/2017/11/thumb_spill_large-214x300.png') bottom/cover no-repeat;
+
+    @include respond(phone) {
+      top: -3rem;
+    }
+
   }
+
+  
