@@ -3,6 +3,10 @@
     min-height: 95vh;
     position: relative;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    @include respond(phone) {
+      z-index: 300;
+    }
 }
 /* #showcase #header {
     background-color: rgba($color-tertiary, 0.8);
