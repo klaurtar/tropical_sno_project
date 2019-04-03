@@ -17,11 +17,19 @@
 #footer .hoursPtag {
     margin-bottom: 1rem;
     font-size: 1.6rem;
+
+    @include respond(phone) {
+        font-size: 2rem;
+    }
     // font-weight: 700;
 }
 
 .locations {
     font-size: 2.5rem;
+
+    @include respond(phone) {
+        font-size: 2rem;
+    }
     // font-weight: 700;
 
     &:not(:last-child) {

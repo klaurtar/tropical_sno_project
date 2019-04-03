@@ -24,6 +24,11 @@
         -webkit-background-clip: text;
         color: transparent;
         padding-bottom: 15rem;
+
+        @include respond(phone) {
+            font-size: 3.5rem;
+            padding-bottom: 30rem;
+        }
     }
 
     i {

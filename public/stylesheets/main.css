@@ -629,9 +629,15 @@ iframe {
 #footer .hoursPtag {
   margin-bottom: 1rem;
   font-size: 1.6rem; }
+  @media (max-width: 37.5em) {
+    #footer .hoursPtag {
+      font-size: 2rem; } }
 
 .locations {
   font-size: 2.5rem; }
+  @media (max-width: 37.5em) {
+    .locations {
+      font-size: 2rem; } }
   .locations:not(:last-child) {
     margin-bottom: 2.3rem; }
 
@@ -655,6 +661,10 @@ iframe {
     -webkit-background-clip: text;
     color: transparent;
     padding-bottom: 15rem; }
+    @media (max-width: 37.5em) {
+      .section-connect span {
+        font-size: 3.5rem;
+        padding-bottom: 30rem; } }
   .section-connect i {
     font-size: 15rem;
     opacity: .7; }
