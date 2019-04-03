@@ -116,10 +116,10 @@ var locationDependentText = (function() {
                 starterText.textContent = '';
                 starterText.insertAdjacentHTML('afterbegin', text);
             });
-            current.addEventListener('mouseleave', function() {
-                starterText.textContent = '';
-                starterText.insertAdjacentHTML('afterbegin', '<h3 class="heading-tertiary u-center-text u-margin-bottom-small">Weve got one near you!</h3><p class="paragraph">With 3 locations evenly spread across St. Louis, were guaranteed to be near you so you can have delicious shaved ice whenever you get a craving!</p>');
-            });
+            // current.addEventListener('mouseleave', function() {
+            //     starterText.textContent = '';
+            //     starterText.insertAdjacentHTML('afterbegin', '<h3 class="heading-tertiary u-center-text u-margin-bottom-small">Weve got one near you!</h3><p class="paragraph">With 3 locations evenly spread across St. Louis, were guaranteed to be near you so you can have delicious shaved ice whenever you get a craving!</p>');
+            // });
         }
             
         
