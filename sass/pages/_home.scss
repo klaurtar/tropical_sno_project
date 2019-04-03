@@ -4,6 +4,12 @@
     margin-top: -20vh;
     min-height: 95vh;
     max-height: 140vh;
+
+    @include respond(phone) {
+        position: relative;
+        padding: 4rem 0 9rem 0;
+        margin-top: 0;
+    }
 }
 
 .section-connect {

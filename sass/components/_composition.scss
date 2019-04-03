@@ -1,6 +1,9 @@
 .composition {
     position: relative;
 
+    @include respond(phone) {
+        position: static;
+    }
     // .overlay {
     //     width: 55%;
     //     position: absolute;
@@ -43,6 +46,10 @@
             &:hover {
                 outline: 1.5rem solid $color-primary;
             }
+
+            @include respond(phone) {
+                top: 19rem;
+            }
         }
 
         &--p2 {
@@ -52,6 +59,10 @@
             &:hover {
                 outline: 1.5rem solid $color-secondary;
             }
+
+            @include respond(phone) {
+                top: 21rem;
+            }
         }
 
         &--p3 {
@@ -60,6 +71,10 @@
 
             &:hover {
                 outline: 1.5rem solid $color-tertiary;
+            }
+
+            @include respond(phone) {
+                top: 27rem;
             }
         }
 
