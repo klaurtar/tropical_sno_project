@@ -672,6 +672,9 @@ iframe {
 .section-employment {
   background: url("/images/tropicalSnoLeafBlue.png") center center/cover no-repeat;
   padding: 0 15rem 6rem 15rem; }
+  @media (max-width: 37.5em) {
+    .section-employment {
+      padding: 0 1rem 6rem 1rem; } }
   .section-employment .margin {
     margin-bottom: 6rem;
     padding-top: 2rem; }
