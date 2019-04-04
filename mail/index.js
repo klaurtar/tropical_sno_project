@@ -26,7 +26,7 @@ function sendAppliedEmail(applicant) {
 
   const mailOptions = {
     from: 'info@tropicalsno.com',
-    to: 'talbertt@charter.net, klaurtar@gmail.com',
+    to: 'talbertt@charter.net, klaurtar@gmail.com, talberttv@gmail.com',
     subject: 'New Applicant to Tropical Sno',
     html
   };
