@@ -308,9 +308,38 @@ iframe {
   margin-bottom: 3rem;
   font-weight: 700; }
 
+label {
+  display: block; }
+
 .supportingText {
   color: #f49842;
   font-size: 2.5rem; }
+
+input[type=date] {
+  width: 100%;
+  border-style: none;
+  border-radius: 1rem;
+  height: 4rem;
+  font-size: 2rem;
+  text-align: start; }
+
+textarea {
+  width: 100%;
+  border: none;
+  border-radius: 1rem;
+  font-size: 2rem;
+  padding: 3px; }
+
+.prevWork {
+  font-size: 2rem; }
+
+.successAlert {
+  background-color: lightgreen;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  border-radius: .5rem;
+  text-align: center;
+  color: #21def8; }
 
 #flavors {
   padding-top: 20rem;
@@ -708,7 +737,7 @@ iframe {
     font-color: black;
     padding: 2rem; }
     .section-employment .application .extraSpace:not(:last-child) {
-      margin-bottom: 4rem; }
+      margin-bottom: 6rem; }
     .section-employment .application h2 {
       text-align: center;
       font-size: 5rem; }

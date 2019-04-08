@@ -17,8 +17,8 @@ function sendAppliedEmail(applicant) {
   html += '<h2 style="color: #f49842; text-align: center">New Applicant</h2>'
   html += '<ul>';
 
-  Object.entries(applicant).forEach(([key, value]) => {
-    // html += `<li>${key}: ${ typeof value === 'string' ? value : JSON.stringify((value), null, '\t')}</li>`;
+  Object.entries(applicant).filter(([key,value])=>value).forEach(([key, value]) => {
+
     html += `<li>${key.replace(/([a-z])([A-Z])/g, `$1 $2`).toUpperCase().fontcolor('green')}: ${value}</li>`;
   });
 

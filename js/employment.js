@@ -69,3 +69,9 @@ var copyrightYear = (function() {
     copyright = document.querySelector('.copyright');
     copyright.textContent = year;
 })();
+
+
+var currentDate = (function() {
+    var today = new Date().toISOString().split('T')[0];
+    document.getElementsByName("dateYouCanBeginWorking")[0].setAttribute('min', today);
+})();

@@ -3,6 +3,9 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var Applicant = require('./models/applicants');
 var sendAppliedEmail = require('./mail/index.js');
+var session = require('express-session');
+var cookieParser = require('cookie-parser');
+var flash = require('connect-flash');
 
 var app = express();
 app.set('view engine', 'ejs');
@@ -17,6 +20,19 @@ var uri = "mongodb+srv://klaurtar:Helloryan1@cluster0-nakj7.mongodb.net/test?ret
 mongoose.connect(uri, {useNewUrlParser: true});
 var db = mongoose.connection;
 app.use(bodyParser.urlencoded({extended: true}));
+
+app.use(cookieParser('secret'));
+app.use(session({
+    secret: 'troSno',
+    resave: false,
+    saveUninitialized: false
+  }));
+
+app.use(flash());
+app.use((req, res, next) => {
+    res.locals.message = req.flash('success');
+    next();
+  });
 // Applicant.create({
     // firstName: 'Ryan',
     // middleInitial: 'L',
@@ -65,9 +81,11 @@ app.post('/employment', function(req, res){
         if(err) {
             console.log(err);
         } else {
-            console.log(newlyCreated);
-            sendAppliedEmail(newApplicant);
+            // console.log(newlyCreated);
+            // sendAppliedEmail(newApplicant);
+            req.flash('success', 'Your application was succesfully submitted! Thank you!');
             res.redirect('/');
+            
         }
     });
 });

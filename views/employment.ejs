@@ -33,12 +33,12 @@
                             </div>
                     </div>
             </div>
-                
+                <hr>
             <div class="extraSpace">
                     <div class="form-row">
                             <div class="col">
                                 <label for="address">Address</label>
-                                <input type="text" class="form" placeholder="Address" name="address">
+                                <input type="text" class="form" placeholder="Address" name="homeAddress">
                             </div>
                         </div>
         
@@ -57,7 +57,7 @@
                                     </div>
                         </div>
             </div>
-                
+                <hr>
             <div class="extraSpace">
                     <div class="form-row">
                             <div class="col-6">
@@ -66,7 +66,7 @@
                             </div>
                             <div class="col-6">
 
-                                <label for="text"> Do you recieve text messages?</label>
+                                <label for="text" class="text-center"> Do you recieve text messages?</label>
                                 <div class="radio justify-content-center" style="height: 4rem">
                                         
                                         <input type="radio" id="radio1" class="align-self-center" name="doYouRecieveText" value="yes">
@@ -78,6 +78,239 @@
                                     
                             </div>
                         </div>
+            </div>
+                <hr>
+            <div class="extraSpace">
+                <div class="form-row">
+                    <div class="col-6">
+
+                        <label for="entitledWork" class="text-center">Are you entitled to work in the United States? *</label>
+                        <div class="radio justify-content-center" style="height: 4rem">
+                                
+                                <input type="radio" id="entitled1" class="align-self-center" name="entitledToWorkInUs" value="yes">
+                                <label class="align-self-end" for="entitled1">Yes</label> 
+                                <input type="radio" id="entitled2" class="align-self-center" name="entitledToWorkInUs" value="no">
+                                <label class="align-self-end" for="entitled2">No</label> 
+                                     
+                        </div>
+                            
+                    </div>
+                    <div class="col-6">
+
+                        <label for="age" class="text-center">Are you 16 or older? *</label>
+                        <div class="radio justify-content-center" style="height: 4rem">
+                                
+                                <input type="radio" id="sixteen1" class="align-self-center" name="sixteenOrOver" value="yes">
+                                <label class="align-self-end" for="sixteen1">Yes</label> 
+                                <input type="radio" id="sixteen2" class="align-self-center" name="sixteenOrOver" value="no">
+                                <label class="align-self-end" for="sixteen2">No</label> 
+                                     
+                        </div>
+                            
+                    </div>
+
+                    <div class="col-6">
+                        <label for="datePicker">Date you can begin working? *</label>
+
+                        <div class="d-flex justify-content-center">
+                            <input type="date" name="dateYouCanBeginWorking" id="datePicker">
+                        </div>
+                        
+                    </div>
+                    <div class="col-6">
+                        <label for="favoriteFlavor">What is your favorite Tropical Sno flavor?</label>
+
+                        <input class="form" type="text" name="favoriteFlavor" id="favoriteFlavor" placeholder="Favorite Flavor">
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="extraSpace">
+                <div class="col-12 text-center prevWork">Recent Work Experience (If you have not worked before, don't fill out!)</div>
+
+                <div class="form-row">
+                    <div class="col">
+                        <label for="employer">Employer</label>
+                        <input type="text" class="form" placeholder="Employer" name="Employer">
+                    </div>
+
+                    <div class="col">
+                        <label for="addressWork">Address</label>
+                        <input type="text" class="form" placeholder="Address" name="address">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                            <div class="col-4">
+                                <label for="cityWork">City</label>
+                                <input type="text" class="form" placeholder="City" name="cityWork">
+                            </div>
+                            <div class="col-4">
+                                <label for="stateWork">State</label>
+                                <input type="text" class="form" placeholder="State" name="stateWork">
+                            </div>
+                            <div class="col-4">
+                                <label for="zipCodeWork">Zip Code</label>
+                                <input type="text" class="form" placeholder="Zip Code" name="zipCodeWork">
+                            </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-6">
+                        <label for="phoneNumberWork">Telephone</label>
+                        <input type="text" class="form" name="phoneNumberWork" id="" placeholder="Telephone">
+                    </div>
+                    <div class="col-6">
+                        <label for="supervisorName">Supervisor Name</label>
+                        <input type="text" class="form" name="supervisorName" id="" placeholder="Supervisor Name">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-6">
+                        <label for="startDate">Start Date</label>
+
+                        <div class="d-flex justify-content-center">
+                            <input type="date" name="startDate" id="startDate">
+                        </div>
+                        
+                    </div>
+                    <div class="col-6">
+                        <label for="endDate">End Date</label>
+
+                        <div class="d-flex justify-content-center">
+                            <input type="date" name="endDate" id="endDate">
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-6">
+                        <label for="jobTitle">Job Title</label>
+                        <input type="text" class="form" name="jobTitle" id="" placeholder="Job Title">
+                    </div>
+                    <div class="col-6">
+                        <label for="payRate">Pay Rate</label>
+                        <input type="text" class="form" name="payRate" id="" placeholder="Pay Rate">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                        <label for="leaveReason">Reason for Leaving?</label>
+                        <textarea name="leaveReason" id="leaveReason" cols="30" rows="5"></textarea>
+                    </div>
+                </div>
+
+                <div class="col">
+
+                    <label for="contactThem" class="text-center">May we contact them?</label>
+                    <div class="radio justify-content-center" style="height: 4rem">
+                            
+                            <input type="radio" id="contact1" class="align-self-center" name="mayWeContactThem" value="yes">
+                            <label class="align-self-end" for="contact1">Yes</label> 
+                            <input type="radio" id="contact2" class="align-self-center" name="mayWeContactThem" value="no">
+                            <label class="align-self-end" for="contact2">No</label> 
+                                 
+                    </div>
+                        
+                </div>
+                <hr>
+
+                <div class="extraSpace">
+                    <div class="col-12 text-center prevWork">Work Experience</div>
+    
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="employer">Employer</label>
+                            <input type="text" class="form" placeholder="Employer" name="Employer2">
+                        </div>
+    
+                        <div class="col">
+                            <label for="address2">Address</label>
+                            <input type="text" class="form" placeholder="Address" name="address2">
+                        </div>
+                    </div>
+    
+                    <div class="form-row">
+                                <div class="col-4">
+                                    <label for="cityWork2">City</label>
+                                    <input type="text" class="form" placeholder="City" name="cityWork2">
+                                </div>
+                                <div class="col-4">
+                                    <label for="stateWork2">State</label>
+                                    <input type="text" class="form" placeholder="State" name="stateWork2">
+                                </div>
+                                <div class="col-4">
+                                    <label for="zipCodeWork2">Zip Code</label>
+                                    <input type="text" class="form" placeholder="Zip Code" name="zipCodeWork2">
+                                </div>
+                    </div>
+    
+                    <div class="form-row">
+                        <div class="col-6">
+                            <label for="phoneNumberWork2">Telephone</label>
+                            <input type="text" class="form" name="phoneNumberWork2" id="" placeholder="Telephone">
+                        </div>
+                        <div class="col-6">
+                            <label for="supervisorName2">Supervisor Name</label>
+                            <input type="text" class="form" name="supervisorName2" id="" placeholder="Supervisor Name">
+                        </div>
+                    </div>
+    
+                    <div class="form-row">
+                        <div class="col-6">
+                            <label for="startDate2">Start Date</label>
+    
+                            <div class="d-flex justify-content-center">
+                                <input type="date" name="startDate2" id="startDate2">
+                            </div>
+                            
+                        </div>
+                        <div class="col-6">
+                            <label for="endDate2">End Date</label>
+    
+                            <div class="d-flex justify-content-center">
+                                <input type="date" name="endDate2" id="endDate2">
+                            </div>
+                            
+                        </div>
+                    </div>
+    
+                    <div class="form-row">
+                        <div class="col-6">
+                            <label for="jobTitle2">Job Title</label>
+                            <input type="text" class="form" name="jobTitle2" id="" placeholder="Job Title">
+                        </div>
+                        <div class="col-6">
+                            <label for="payRate2">Pay Rate</label>
+                            <input type="text" class="form" name="payRate2" id="" placeholder="Pay Rate">
+                        </div>
+                    </div>
+    
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="leaveReason2">Reason for Leaving?</label>
+                            <textarea name="leaveReason2" id="leaveReason2" cols="30" rows="5"></textarea>
+                        </div>
+                    </div>
+    
+                    <div class="col">
+    
+                        <label for="contactThem2" class="text-center">May we contact them?</label>
+                        <div class="radio justify-content-center" style="height: 4rem">
+                                
+                                <input type="radio" id="contact3" class="align-self-center" name="MayWeContactThem2" value="yes">
+                                <label class="align-self-end" for="contact3">Yes</label> 
+                                <input type="radio" id="contact4" class="align-self-center" name="MayWeContactThem2" value="no">
+                                <label class="align-self-end" for="contact4">No</label> 
+                                     
+                        </div>
+                            
+                    </div>
+                    <hr>
+            </div>
             </div>
             <button class="btn btn-lg btn-success">Submit</button>
         </form>
