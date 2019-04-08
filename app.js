@@ -81,8 +81,8 @@ app.post('/employment', function(req, res){
         if(err) {
             console.log(err);
         } else {
-            // console.log(newlyCreated);
-            // sendAppliedEmail(newApplicant);
+            console.log(newlyCreated);
+            sendAppliedEmail(newApplicant);
             req.flash('success', 'Your application was succesfully submitted! Thank you!');
             res.redirect('/');
             
