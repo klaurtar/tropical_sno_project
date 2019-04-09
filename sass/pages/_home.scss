@@ -49,13 +49,24 @@
     background: url('/images/tropicalSnoLeafBlue.png') center center/cover no-repeat;
     padding: 0 15rem 6rem 15rem;
 
+    @include respond(tab-land) {
+        padding: 0 5rem 6rem 5rem;
+      }
 
+    @include respond(tab-port) {
+        padding: 0 5rem 6rem 5rem;
+      }
+      
     @include respond(phone) {
         padding: 0 1rem 6rem 1rem;
     }
     .margin {
         margin-bottom: 6rem;
         padding-top: 2rem;
+
+        @include respond(phone) {
+            padding-top: 2rem;
+        }
     }
 
     .application {
@@ -113,7 +124,7 @@
 
             label {
                 font-size: 2rem;
-                margin-right: 3rem;
+                
             }
             &:not(:last-child) {
                 margin-bottom: 1.5rem;

@@ -307,6 +307,9 @@ iframe {
   font-size: 5rem;
   margin-bottom: 3rem;
   font-weight: 700; }
+  @media (max-width: 37.5em) {
+    .header {
+      font-size: 4rem; } }
 
 label {
   display: block; }
@@ -314,6 +317,17 @@ label {
 .supportingText {
   color: #f49842;
   font-size: 2.5rem; }
+  @media (max-width: 56.25em) {
+    .supportingText {
+      text-align: center; } }
+  @media (max-width: 37.5em) {
+    .supportingText {
+      margin-top: 7rem;
+      text-align: center; } }
+
+@media (max-width: 37.5em) {
+  .sideNote {
+    font-size: 1.5rem; } }
 
 input[type=date] {
   width: 100%;
@@ -333,9 +347,23 @@ textarea {
 .prevWork {
   font-size: 2rem; }
 
+#availabilityExplanation {
+  font-size: 2rem; }
+
+#dateAvailability {
+  font-size: 1.1rem; }
+
+select {
+  background-color: white;
+  height: 4rem;
+  border: none; }
+
+#submitButton {
+  font-size: 2rem;
+  padding: 1rem 2rem; }
+
 .successAlert {
   background-color: lightgreen;
-  margin-bottom: 10px;
   font-size: 2rem;
   border-radius: .5rem;
   text-align: center;
@@ -676,6 +704,9 @@ textarea {
 #footer .hoursPtag {
   margin-bottom: 1rem;
   font-size: 1.6rem; }
+  @media (max-width: 75em) {
+    #footer .hoursPtag {
+      font-size: 2.5rem; } }
   @media (max-width: 37.5em) {
     #footer .hoursPtag {
       font-size: 2rem; } }
@@ -724,12 +755,21 @@ textarea {
 .section-employment {
   background: url("/images/tropicalSnoLeafBlue.png") center center/cover no-repeat;
   padding: 0 15rem 6rem 15rem; }
+  @media (max-width: 75em) {
+    .section-employment {
+      padding: 0 5rem 6rem 5rem; } }
+  @media (max-width: 56.25em) {
+    .section-employment {
+      padding: 0 5rem 6rem 5rem; } }
   @media (max-width: 37.5em) {
     .section-employment {
       padding: 0 1rem 6rem 1rem; } }
   .section-employment .margin {
     margin-bottom: 6rem;
     padding-top: 2rem; }
+    @media (max-width: 37.5em) {
+      .section-employment .margin {
+        padding-top: 2rem; } }
   .section-employment .application {
     width: 100%;
     background-color: #b9b9b9e3;
@@ -765,7 +805,6 @@ textarea {
         .section-employment .application div .radio input[type="radio"]:not(:first-child) {
           margin-left: 1rem; }
     .section-employment .application div label {
-      font-size: 2rem;
-      margin-right: 3rem; }
+      font-size: 2rem; }
     .section-employment .application div:not(:last-child) {
       margin-bottom: 1.5rem; }
