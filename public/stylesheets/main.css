@@ -164,7 +164,7 @@ body {
 
 .floatingCard {
   perspective: 240rem;
-  -moz-persepective: 240rem;
+  -moz-perspective: 240rem;
   position: relative;
   background: url("/images/tropicalSnoLeafBlue.png") center center/cover no-repeat; }
 
@@ -173,6 +173,7 @@ body {
   color: #fff;
   font-size: 2rem;
   transition: all 0.8s;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
 
 .card-side-front {
