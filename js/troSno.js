@@ -339,6 +339,73 @@ var flavorPopup = (function(){
 })();
 
 
+    var flavorScroll = (function() {
+    
+    
+        var flavorBox1 = document.body.querySelector('#flavor-box-1');
+        var flavorBox2 = document.body.querySelector('#flavor-box-2');
+        var flavorBox3 = document.body.querySelector('#flavor-box-3');
+        var flavorBox4 = document.body.querySelector('#flavor-box-4');
+
+        var buttonRight = document.body.querySelector('#flavorButtonRight');
+        var buttonLeft = document.body.querySelector('#flavorButtonLeft');
+
+        var step = 1;
+
+        leftButton.style.visibility = 'hidden';
+
+        function flavorDisplayer(currentStep){
+            if(currentStep === 1) {
+                flavorBox1.style.display = 'block';
+
+                flavorBox2.style.display = 'none';
+
+                leftButton.style.visibility = 'hidden';
+            } else if(currentStep === 2) {
+                flavorBox2.style.display = 'block';
+
+                flavorBox1.style.display = 'none';
+                flavorBox3.style.display = 'none';
+
+                leftButton.style.visibility = 'visible'; 
+            } else if(currentStep === 3) {
+                flavorBox3.style.display = 'block';
+
+                flavorBox2.style.display = 'none';
+                flavorBox4.style.display = 'none';
+
+                rightButton.style.visibility = 'visible';
+            } else if(currentStep === 4) {
+                flavorBox4.style.display = 'block';
+
+                flavorBox3.style.display = 'none';
+
+                rightButton.style.visibility = 'hidden';
+            }
+        }
+            
+
+        
+        
+
+        buttonRight.addEventListener('click', function() {
+            step += 1;
+
+            flavorDisplayer(step);
+        });
+
+        buttonLeft.addEventListener('click', function() {
+            step -= 1;
+
+            flavorDisplayer(step);
+        });
+        
+    
+    
+})();
+    
+
+
 var navClose = (function() {
     
     //Create a HTML collection of links

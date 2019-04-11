@@ -10,12 +10,18 @@
     transform: skewY(-7deg);
 
     @include respond(tab-port) {
-        .feature-box {
-            display: none;
-        }
+        // .feature-box {
+        //     display: none;
+        // }
       }
     @include respond(phone) {
-        .feature-box {
+        #flavor-box-2 {
+            display: none;
+        }
+        #flavor-box-3 {
+            display: none;
+        }
+        #flavor-box-4 {
             display: none;
         }
       }
@@ -60,6 +66,10 @@
         top: 1rem;
         left: 50%;
         transform: translateX(-50%);
+
+        @include respond(phone) {
+            width: 100%;
+        }
         
 
         span {
@@ -101,6 +111,46 @@
         top: 13rem;
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    #leftButton {
+        display: none;
+        padding-left: 1rem;
+
+        @include respond(phone) {
+
+        
+        text-align: start;
+        width: 50%;
+        display: inline-block;
+
+        i {
+            padding: 1rem;
+            font-size: 5rem;
+            color: $color-primary;
+            // border-radius: 90px;
+            
+        }
+    }    
+    }
+
+    #rightButton {
+        display: none;
+        padding-right: 1rem;
+
+        @include respond(phone) {
+        text-align: end;
+        width: 50%;
+        display: inline-block;
+        float: right;
+
+        i {
+            padding: 1rem;
+            font-size: 5rem;
+            color: $color-primary;
+            
+        }
+    }           
     }
 }
 
