@@ -197,10 +197,10 @@ body {
   left: 0;
   width: 100%; }
 
-.floatingCard:hover, .floatingCard:active .card-side-front {
+.floatingCard:hover .card-side-front {
   transform: rotateY(180deg); }
 
-.floatingCard:hover, .floatingCard:active .card-side-back {
+.floatingCard:hover .card-side-back {
   transform: rotateY(0); }
 
 .price {
