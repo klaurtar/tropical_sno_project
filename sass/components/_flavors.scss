@@ -13,6 +13,16 @@
         // .feature-box {
         //     display: none;
         // }
+
+        #flavor-box-2 {
+            display: none;
+        }
+        #flavor-box-3 {
+            display: none;
+        }
+        #flavor-box-4 {
+            display: none;
+        }
       }
     @include respond(phone) {
         #flavor-box-2 {
@@ -117,6 +127,20 @@
         display: none;
         padding-left: 1rem;
 
+        @include respond(tab-port) {
+            text-align: start;
+            width: 50%;
+            display: inline-block;
+
+        i {
+            padding: 1rem;
+            font-size: 5rem;
+            color: $color-primary;
+            // border-radius: 90px;
+            
+        }
+        }
+
         @include respond(phone) {
 
         
@@ -137,6 +161,20 @@
     #rightButton {
         display: none;
         padding-right: 1rem;
+
+        @include respond(tab-port) {
+            text-align: end;
+            width: 50%;
+            display: inline-block;
+            float: right;
+
+        i {
+            padding: 1rem;
+            font-size: 5rem;
+            color: $color-primary;
+            
+        }
+        }
 
         @include respond(phone) {
         text-align: end;

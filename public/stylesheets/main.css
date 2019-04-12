@@ -381,6 +381,13 @@ select {
   position: relative;
   margin-top: -7.5rem;
   transform: skewY(-7deg); }
+  @media (max-width: 56.25em) {
+    #flavors #flavor-box-2 {
+      display: none; }
+    #flavors #flavor-box-3 {
+      display: none; }
+    #flavors #flavor-box-4 {
+      display: none; } }
   @media (max-width: 37.5em) {
     #flavors #flavor-box-2 {
       display: none; }
@@ -452,6 +459,15 @@ select {
   #flavors #leftButton {
     display: none;
     padding-left: 1rem; }
+    @media (max-width: 56.25em) {
+      #flavors #leftButton {
+        text-align: start;
+        width: 50%;
+        display: inline-block; }
+        #flavors #leftButton i {
+          padding: 1rem;
+          font-size: 5rem;
+          color: #21def8; } }
     @media (max-width: 37.5em) {
       #flavors #leftButton {
         text-align: start;
@@ -464,6 +480,16 @@ select {
   #flavors #rightButton {
     display: none;
     padding-right: 1rem; }
+    @media (max-width: 56.25em) {
+      #flavors #rightButton {
+        text-align: end;
+        width: 50%;
+        display: inline-block;
+        float: right; }
+        #flavors #rightButton i {
+          padding: 1rem;
+          font-size: 5rem;
+          color: #21def8; } }
     @media (max-width: 37.5em) {
       #flavors #rightButton {
         text-align: end;

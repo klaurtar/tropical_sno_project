@@ -307,20 +307,31 @@ var flavorPopup = (function(){
     
 
     flavorArr.forEach(function(current) {
-        
         var insertedText =  function() {
             comboContainer.innerHTML = "";
             comboContainer.insertAdjacentHTML('afterbegin', current.message);
         }
 
-
-        current.selector.addEventListener('mouseenter', function() {
-            insertedText();
-        })
-
-        current.selector.addEventListener('mouseleave', function() {
+        if(window.width <= 900) {
+            current.selector.addEventListener('touchstart', function() {
+                insertedText();
+            })
+            
+            current.selector.addEventListener('touchend', function() {
                 comboContainer.innerHTML = '<h3 class="text-center">Flavors</h3><h4 class="pulse">(hover over a flavor)</h4>';
             })
+        } else {
+            
+            current.selector.addEventListener('mouseenter', function() {
+                insertedText();
+            })
+    
+            current.selector.addEventListener('mouseleave', function() {
+                    comboContainer.innerHTML = '<h3 class="text-center">Flavors</h3><h4 class="pulse">(hover over a flavor)</h4>';
+            })
+        }
+        
+            
     });
 
     
