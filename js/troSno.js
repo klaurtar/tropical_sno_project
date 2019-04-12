@@ -157,55 +157,55 @@ var flavorAdder = (function() {
     var flavorArr1, flavorArr2, flavorArr3, flavorArr4, textLocator1, textLocator2, textLocator3, textLocator4, addToPage;
 
     flavorArr1 = [
-        '<p class="red" id="apple">Apple</p>',
-        '<p class="yellow" id="banana">Banana</p>',
-        '<p class="white" id="birthdayCake">Birthday Cake</p>',
-        '<p class="darkRed" id="blackCherry">Black Cherry</p>',
-        '<p class="blue" id="blueHawaiian">Blue Hawaiian</p>',
-        '<p class="blue" id="blueRaspberry">Blue Raspberry</p>',
-        '<p class="purple" id="blueberry">Blueberry</p>',
-        '<p class="pink" id="bubblegum">Bubblegum</p>',
-        '<p class="red" id="cinnamon">Cinnamon</p>',
-        '<p class="white" id="coconut">Coconut</p>'
+        '<p class="red" id="apple" onclick="">Apple</p>',
+        '<p class="yellow" id="banana" onclick="">Banana</p>',
+        '<p class="white" id="birthdayCake" onclick="">Birthday Cake</p>',
+        '<p class="darkRed" id="blackCherry" onclick="">Black Cherry</p>',
+        '<p class="blue" id="blueHawaiian" onclick="">Blue Hawaiian</p>',
+        '<p class="blue" id="blueRaspberry" onclick="">Blue Raspberry</p>',
+        '<p class="purple" id="blueberry" onclick="">Blueberry</p>',
+        '<p class="pink" id="bubblegum" onclick="">Bubblegum</p>',
+        '<p class="red" id="cinnamon" onclick="">Cinnamon</p>',
+        '<p class="white" id="coconut" onclick="">Coconut</p>'
     ];
 
     flavorArr2 = [
-        '<p class="brown" id="coffee">Coffee</p>',
-        '<p class="brown" id="cola">Cola</p>',
-        '<p class="pink" id="cottonCandy">Cotton Candy</p>',
-        '<p class="red" id="cranberry">Cranberry</p>',
-        '<p class="green" id="lime">Fresh Lime</p>',
-        '<p class="purple" id="grape">Grape</p>',
-        '<p class="green" id="greenApple">Green Apple</p>',
-        '<p class="pink" id="guava">Guava</p>',
-        '<p class="green" id="honeydew">Honeydew Melon</p>',
-        '<p class="purple" id="huckleberry">Huckleberry</p>'
+        '<p class="brown" id="coffee" onclick="">Coffee</p>',
+        '<p class="brown" id="cola" onclick="">Cola</p>',
+        '<p class="pink" id="cottonCandy" onclick="">Cotton Candy</p>',
+        '<p class="red" id="cranberry" onclick="">Cranberry</p>',
+        '<p class="green" id="lime" onclick="">Fresh Lime</p>',
+        '<p class="purple" id="grape" onclick="">Grape</p>',
+        '<p class="green" id="greenApple" onclick="">Green Apple</p>',
+        '<p class="pink" id="guava" onclick="">Guava</p>',
+        '<p class="green" id="honeydew" onclick="">Honeydew Melon</p>',
+        '<p class="purple" id="huckleberry" onclick="">Huckleberry</p>'
     ];
 
     flavorArr3 = [
-        '<p class="green" id="kiwi">Kiwi</p>',
-        '<p class="yellow" id="lemon">Lemon</p>',
-        '<p class="orange" id="mango">Mango</p>',
-        '<p class="green" id="margarita">Margarita</p>',
-        '<p class="orange" id="orange">Orange</p>',
-        '<p class="yellow" id="passionFruit">Passion Fruit</p>',
-        '<p class="orange" id="peach">Peach</p>',
-        '<p class="yellow" id="pinaColada">Piña Colada</p>',
-        '<p class="yellow" id="pineapple">Pineapple</p>',
-        '<p class="pink" id="pinkGrapefruit">Pink Grapefruit</p>'
+        '<p class="green" id="kiwi" onclick="">Kiwi</p>',
+        '<p class="yellow" id="lemon" onclick="">Lemon</p>',
+        '<p class="orange" id="mango" onclick="">Mango</p>',
+        '<p class="green" id="margarita" onclick="">Margarita</p>',
+        '<p class="orange" id="orange" onclick="">Orange</p>',
+        '<p class="yellow" id="passionFruit" onclick="">Passion Fruit</p>',
+        '<p class="orange" id="peach" onclick="">Peach</p>',
+        '<p class="yellow" id="pinaColada" onclick="">Piña Colada</p>',
+        '<p class="yellow" id="pineapple" onclick="">Pineapple</p>',
+        '<p class="pink" id="pinkGrapefruit" onclick="">Pink Grapefruit</p>'
     ];
 
     flavorArr4 = [
-        '<p class="pink" id="pinkLemonade">Pink Lemonade</p>',
-        '<p class="red" id="redRaspberry">Red Raspberry</p>',
-        '<p class="brown" id="rootbeer">Rootbeer</p>',
-        '<p class="red" id="strawberry">Strawberry</p>',
-        '<p class="orange" id="tangerine">Tangerine</p>',
-        '<p class="red" id="tigersBlood">Tiger’s Blood</p>',
-        '<p class="red" id="tuttiFrutti">Tutti Frutti</p>',
-        '<p class="white" id="vanilla">Vanilla</p>',
-        '<p class="red" id="verryCherry">Verry Cherry</p>',
-        '<p class="red" id="watermelon">Watermelon</p>'
+        '<p class="pink" id="pinkLemonade" onclick="">Pink Lemonade</p>',
+        '<p class="red" id="redRaspberry" onclick="">Red Raspberry</p>',
+        '<p class="brown" id="rootbeer" onclick="">Rootbeer</p>',
+        '<p class="red" id="strawberry" onclick="">Strawberry</p>',
+        '<p class="orange" id="tangerine" onclick="">Tangerine</p>',
+        '<p class="red" id="tigersBlood" onclick="">Tiger’s Blood</p>',
+        '<p class="red" id="tuttiFrutti" onclick="">Tutti Frutti</p>',
+        '<p class="white" id="vanilla" onclick="">Vanilla</p>',
+        '<p class="red" id="verryCherry" onclick="">Verry Cherry</p>',
+        '<p class="red" id="watermelon" onclick="">Watermelon</p>'
     ];
 
     textLocator1 = document.querySelector('#flavorList1');
@@ -312,24 +312,16 @@ var flavorPopup = (function(){
             comboContainer.insertAdjacentHTML('afterbegin', current.message);
         }
 
-        if(window.width <= 900) {
-            current.selector.addEventListener('touchstart', function() {
-                insertedText();
-            })
-            
-            current.selector.addEventListener('touchend', function() {
-                comboContainer.innerHTML = '<h3 class="text-center">Flavors</h3><h4 class="pulse">(hover over a flavor)</h4>';
-            })
-        } else {
-            
-            current.selector.addEventListener('mouseenter', function() {
-                insertedText();
-            })
     
-            current.selector.addEventListener('mouseleave', function() {
-                    comboContainer.innerHTML = '<h3 class="text-center">Flavors</h3><h4 class="pulse">(hover over a flavor)</h4>';
-            })
-        }
+            
+        current.selector.addEventListener('mouseenter', function() {
+            insertedText();
+        })
+    
+        current.selector.addEventListener('mouseleave', function() {
+                comboContainer.innerHTML = '<h3 class="text-center">Flavors</h3><h4 class="pulse">(hover over a flavor)</h4>';
+        })
+        
         
             
     });
