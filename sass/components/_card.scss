@@ -26,8 +26,10 @@
   }
   
   .floatingCard {
-    perspective: 240rem;
+    -webkit-perspective: 240rem;
     -moz-perspective: 240rem;
+    perspective: 240rem;
+    
     position: relative;
     background: url('/images/tropicalSnoLeafBlue.png') center center/cover no-repeat;
   
@@ -64,10 +66,10 @@
     left: 0;
     width: 100%;
   }
-  .floatingCard:hover .card-side-front {
+  .floatingCard:hover, .floatingCard:active .card-side-front {
     transform: rotateY(180deg);
   }
-  .floatingCard:hover .card-side-back {
+  .floatingCard:hover, .floatingCard:active .card-side-back {
     transform: rotateY(0);
   }
   .price {
