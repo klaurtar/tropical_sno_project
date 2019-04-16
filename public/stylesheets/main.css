@@ -108,6 +108,11 @@ body {
 
 .paragraph {
   font-size: 2rem; }
+  @media (max-width: 37.5em) {
+    .paragraph {
+      text-align: center;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem; } }
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
 
@@ -267,6 +272,10 @@ body {
     z-index: 10;
     transition: all .2s;
     outline-offset: 2rem; }
+    @media (max-width: 37.5em) {
+      .composition__photo {
+        width: 45%;
+        outline-offset: .5rem; } }
     .composition__photo--p1 {
       left: 0;
       top: -2rem; }
@@ -274,7 +283,8 @@ body {
         outline: 1.5rem solid #21def8; }
       @media (max-width: 37.5em) {
         .composition__photo--p1 {
-          top: 32rem; } }
+          top: 32rem;
+          left: 2.6rem; } }
     .composition__photo--p2 {
       right: 0;
       top: 2rem; }
@@ -282,7 +292,8 @@ body {
         outline: 1.5rem solid #b3e932; }
       @media (max-width: 37.5em) {
         .composition__photo--p2 {
-          top: 33rem; } }
+          top: 33rem;
+          right: 3.1rem; } }
     .composition__photo--p3 {
       left: 20%;
       top: 10rem; }
@@ -290,7 +301,8 @@ body {
         outline: 1.5rem solid #f49842; }
       @media (max-width: 37.5em) {
         .composition__photo--p3 {
-          top: 42rem; } }
+          top: 40rem;
+          left: 10.5rem; } }
     .composition__photo:hover {
       transform: scale(1.05) translateY(-0.5rem);
       box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
@@ -781,8 +793,7 @@ select {
   background-color: #f7f7f7;
   padding: 25rem 0 35rem 0;
   margin-top: -20vh;
-  min-height: 95vh;
-  max-height: 140vh; }
+  min-height: 95vh; }
   @media (max-width: 37.5em) {
     .section-about {
       position: relative;

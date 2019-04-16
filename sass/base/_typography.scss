@@ -42,7 +42,16 @@
 .paragraph {
     font-size: $default-font-size;
     
+    @include respond(phone) {
+        text-align: center;
+
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
     &:not(:last-child) {
         margin-bottom: 3rem;
     }
+
+    
 }
