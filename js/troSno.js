@@ -406,7 +406,6 @@ var flavorPopup = (function(){
     
     
 })();
-    
 
 
 var navClose = (function() {
@@ -426,6 +425,24 @@ var navClose = (function() {
     
 })();
 
+
+var simpleInstruction = (function() {
+    var wordSwitcher, widthMatch;
+
+    wordSwitcher = document.body.querySelector('#flavorInstruction');
+
+
+    widthMatch = window.matchMedia("(max-width: 901px)");
+    // mm in the function arg is the matchMedia object, passed back into the function
+    
+    if (widthMatch.matches) {
+        wordSwitcher.textContent = "Click";
+    }
+    else {
+        wordSwitcher.textContent = "Hover over";
+        }
+    
+})();
 
 var copyrightYear = (function() {
     var today, year, copyright

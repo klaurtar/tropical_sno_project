@@ -9,6 +9,14 @@
 
     transform: skewY(-7deg);
 
+    .mobileLook {
+        @include respond(phone) {
+            width: 80%!important;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+    }
+
     @include respond(tab-port) {
         // .feature-box {
         //     display: none;
@@ -78,7 +86,7 @@
         transform: translateX(-50%);
 
         @include respond(phone) {
-            width: 100%;
+            width: 90%;
         }
         
 
@@ -86,16 +94,28 @@
             color: white;
             font-size: 3rem;
             text-decoration: underline;
+
+            @include respond(phone) {
+                font-size: 2.6rem;
+            }
         }
         
             #comboName {
                 color: white;
                 font-size: 2rem;
+
+                @include respond(phone) {
+                    font-size: 2.6rem;
+                }
             }
 
             #flavorCombo {
                 color: white;
                 font-size: 2rem;
+
+                @include respond(phone) {
+                    font-size: 1.5rem;
+                }
             }
             p {
                 font-weight: 700;

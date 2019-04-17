@@ -9,7 +9,9 @@
 
   @include respond(phone) {
     height: 180rem;
-    margin-top: -0.5rem;
+
+    width: 100%;
+    margin-top: -2.5rem;
       #cardTwo {
         margin-top: 33rem;
       }

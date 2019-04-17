@@ -159,7 +159,8 @@ body {
   @media (max-width: 37.5em) {
     #floatingCards {
       height: 180rem;
-      margin-top: -0.5rem; }
+      width: 100%;
+      margin-top: -2.5rem; }
       #floatingCards #cardTwo {
         margin-top: 33rem; }
       #floatingCards #cardThree {
@@ -393,6 +394,11 @@ select {
   position: relative;
   margin-top: -7.5rem;
   transform: skewY(-7deg); }
+  @media (max-width: 37.5em) {
+    #flavors .mobileLook {
+      width: 80% !important;
+      margin-left: 10%;
+      margin-right: 10%; } }
   @media (max-width: 56.25em) {
     #flavors #flavor-box-2 {
       display: none; }
@@ -438,17 +444,26 @@ select {
     transform: translateX(-50%); }
     @media (max-width: 37.5em) {
       #flavors #comboDisplay {
-        width: 100%; } }
+        width: 90%; } }
     #flavors #comboDisplay span {
       color: white;
       font-size: 3rem;
       text-decoration: underline; }
+      @media (max-width: 37.5em) {
+        #flavors #comboDisplay span {
+          font-size: 2.6rem; } }
     #flavors #comboDisplay #comboName {
       color: white;
       font-size: 2rem; }
+      @media (max-width: 37.5em) {
+        #flavors #comboDisplay #comboName {
+          font-size: 2.6rem; } }
     #flavors #comboDisplay #flavorCombo {
       color: white;
       font-size: 2rem; }
+      @media (max-width: 37.5em) {
+        #flavors #comboDisplay #flavorCombo {
+          font-size: 1.5rem; } }
     #flavors #comboDisplay p {
       font-weight: 700;
       letter-spacing: 0.3rem; }
