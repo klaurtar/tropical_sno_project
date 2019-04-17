@@ -483,6 +483,9 @@ select {
     top: 13rem;
     left: 50%;
     transform: translateX(-50%); }
+  #flavors button {
+    background-color: transparent;
+    border: none; }
   #flavors #leftButton {
     display: none;
     padding-left: 1rem; }

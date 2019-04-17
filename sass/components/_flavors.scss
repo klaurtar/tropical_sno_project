@@ -143,6 +143,11 @@
         transform: translateX(-50%);
     }
 
+    button {
+        background-color: transparent;
+        border: none;
+    }
+
     #leftButton {
         display: none;
         padding-left: 1rem;
