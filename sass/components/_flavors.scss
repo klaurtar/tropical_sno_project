@@ -9,7 +9,19 @@
 
     transform: skewY(-7deg);
 
+    @include respond(tab-port) {
+        padding-top: 27rem;
+    }
+    @include respond(phone) {
+        padding-top: 20rem;
+    }
+
     .mobileLook {
+        @include respond(tab-port) {
+            width: 70%!important;
+            margin-left: 15%;
+            margin-right: 15%;
+        }
         @include respond(phone) {
             width: 80%!important;
             margin-left: 10%;
@@ -54,12 +66,26 @@
         text-align: center;
         transform: skewY(7deg);
 
+        @include respond(tab-port) {
+            height: 50rem;
+        }
+        @include respond(phone) {
+            height: 36rem;
+        }
+
         p {
             font-size: 1.5rem;
             font-weight: 700;
             letter-spacing: 0.3rem;
             // text-shadow: 1px 1px rgba(0, 0, 0, .5);
             transition: all .1s;
+
+            @include respond(tab-port) {
+                font-size: 2.5rem;
+            }
+            @include respond(phone) {
+                font-size: 1.5rem;
+            }
 
             &:hover {
                 transform: scale(2) skewY(-7deg);
@@ -85,6 +111,9 @@
         left: 50%;
         transform: translateX(-50%);
 
+        @include respond(tab-port) {
+            width: 70%;
+        }
         @include respond(phone) {
             width: 90%;
         }
@@ -95,6 +124,9 @@
             font-size: 3rem;
             text-decoration: underline;
 
+            @include respond(tab-port) {
+                font-size: 4rem;
+            }
             @include respond(phone) {
                 font-size: 2.6rem;
             }
@@ -104,6 +136,9 @@
                 color: white;
                 font-size: 2rem;
 
+                @include respond(tab-port) {
+                    font-size: 4rem;
+                }
                 @include respond(phone) {
                     font-size: 2.6rem;
                 }

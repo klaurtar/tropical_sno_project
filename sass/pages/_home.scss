@@ -5,6 +5,13 @@
     min-height: 95vh;
     
 
+    @include respond(tab-port) {
+        position: relative;
+        padding: 4rem 0 9rem 0;
+        margin-top: -0.3rem;
+
+        min-height: 80vh;
+    }
     @include respond(phone) {
         position: relative;
         padding: 18rem 0 9rem 0;
@@ -32,6 +39,10 @@
         color: transparent;
         padding-bottom: 15rem;
 
+        @include respond(tab-port) {
+            font-size: 9.5rem;
+            padding-bottom: 30rem;
+        }
         @include respond(phone) {
             font-size: 3.5rem;
             padding-bottom: 30rem;
@@ -41,6 +52,13 @@
     i {
         font-size: 15rem;
         opacity: .7;
+
+        @include respond(tab-port) {
+            font-size: 30rem;
+        }
+        @include respond(phone) {
+            font-size: 15rem;
+        }
     }
 }
 

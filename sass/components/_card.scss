@@ -7,6 +7,13 @@
     padding-bottom: 20rem;
     // padding-top: 50rem;
 
+  @include respond(tab-port) {
+    width: 100%;
+
+    height: 185rem;
+    
+  }
+  
   @include respond(phone) {
     height: 180rem;
 
@@ -82,6 +89,11 @@
   #floatingCards p {
     font-size: 3.6rem;
 
+    @include respond(tab-port) {
+      font-size: 4rem;
+      font-weight: 700;
+      text-decoration: underline;
+    }
     @include respond(phone) {
       font-size: 4rem;
       font-weight: 700;
@@ -92,6 +104,12 @@
   #floatingOneBack {
     background: linear-gradient(to bottom right, green, $color-secondary);
 
+    @include respond(tab-port) {
+      width: 50%;
+      height: 36rem;
+      left: 25%;
+      top: -32rem;
+    }
     @include respond(phone) {
       top: 0;
       height: 34rem;
@@ -100,6 +118,12 @@
   #floatingTwoBack {
     background: linear-gradient(to bottom right, blue, $color-primary);
 
+    @include respond(tab-port) {
+      width: 50%;
+      height: 43rem;
+      left: 25%;
+      top: -39rem;
+    }
     @include respond(phone) {
       top: 1.5rem;
       height: 38rem;
@@ -108,6 +132,12 @@
   #floatingThreeBack {
     background: linear-gradient(to bottom right, orange, $color-tertiary);
 
+    @include respond(tab-port) {
+      width: 50%;
+      height: 47rem;
+      left: 25%;
+      top: -23rem;
+    }
     @include respond(phone) {
       top: 1rem;
       height: 40rem;
@@ -117,6 +147,14 @@
   #floatingOne {
     background: url('https://www.tropicalsno.com/wp-content/uploads/2017/11/thumb_spill_small-214x300.png') bottom/cover no-repeat;
 
+
+
+    @include respond(tab-port) {
+      width: 50%;
+      height: 40rem;
+      left: 25%;
+      top: -32rem;
+    }
     @include respond(phone) {
       top: -6rem;
     }
@@ -124,7 +162,14 @@
   }
   #floatingTwo {
     background: url('https://www.tropicalsno.com/wp-content/uploads/2017/11/thumb_spill_medium-214x300.png') bottom/cover no-repeat;
+    
 
+    @include respond(tab-port) {
+      width: 50%;
+      height: 45rem;
+      left: 25%;
+      top: -39rem;
+    }
     @include respond(phone) {
       top: -3rem;
     }
@@ -133,6 +178,13 @@
   #floatingThree {
     background: url('https://www.tropicalsno.com/wp-content/uploads/2017/11/thumb_spill_large-214x300.png') bottom/cover no-repeat;
 
+    
+    @include respond(tab-port) {
+      width: 50%;
+      height: 50rem;
+      left: 25%;
+      top: -23rem;
+    }
     @include respond(phone) {
       top: 4rem;
     }

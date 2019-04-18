@@ -13,13 +13,20 @@
 }
 #footer h3 {
   font-size: 2.5rem;
+
+  @include respond(tab-port) {
+    font-size: 5rem;
+  }
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
 }
 #footer .hoursPtag {
     margin-bottom: 1rem;
     font-size: 1.6rem;
 
-    @include respond(tab-land) {
-        font-size: 2.5rem;
+    @include respond(tab-port) {
+        font-size: 3.5rem;
     }
     @include respond(phone) {
         font-size: 2rem;
@@ -31,6 +38,9 @@
     font-size: 2.5rem;
 
 
+    @include respond(tab-port) {
+        font-size: 3.5rem;
+    }
     @include respond(phone) {
         font-size: 2rem;
     }

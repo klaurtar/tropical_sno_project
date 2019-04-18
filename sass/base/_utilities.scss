@@ -5,8 +5,11 @@
 .u-margin-bottom-big {
     margin-bottom: 8rem;
 
+    @include respond(tab-port) {
+        margin-bottom: 50rem;
+    }
     @include respond(phone) {
-        margin-bottom: 34rem;
+        margin-bottom: 30rem;
     }
 }
 
@@ -16,4 +19,29 @@
 
 .u-margin-bottom-small {
     margin-bottom: 1rem;
+}
+
+.u-bottom-margin-small {
+    @include respond(tab-port) {
+        margin-bottom: 33rem;
+    }
+    @include respond(phone) {
+        margin-bottom: 0;
+    }
+}
+.u-bottom-margin-medium {
+    @include respond(tab-port) {
+        margin-bottom: 40rem;
+    }
+    @include respond(phone) {
+        margin-bottom: 0;
+    }
+}
+.u-bottom-margin-large {
+    @include respond(tab-port) {
+        margin-bottom: 24rem;
+    }
+    @include respond(phone) {
+        margin-bottom: 0;
+    }
 }

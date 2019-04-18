@@ -1,6 +1,9 @@
 .composition {
     position: relative;
 
+    @include respond(tab-port) {
+        position: static;
+    }
     @include respond(phone) {
         position: static;
     }
@@ -32,12 +35,19 @@
 
     &__photo {
         width: 55%;
+
+        
+
         box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .4);
         border-radius: 2px;
         position: absolute;
         z-index: 10;
         transition: all .2s;
         outline-offset: 2rem;
+
+        @include respond(tab-port) {
+            width: 40%;
+        }
 
         @include respond(phone) {
             width: 45%;
@@ -52,6 +62,10 @@
                 outline: 1.5rem solid $color-primary;
             }
 
+            @include respond(tab-port) {
+                top: 14rem;
+                left: 11rem;
+            }
             @include respond(phone) {
                 top: 32rem;
                 left: 2.6rem;
@@ -66,6 +80,10 @@
                 outline: 1.5rem solid $color-secondary;
             }
 
+            @include respond(tab-port) {
+                top: 17rem;
+                right: 11rem;
+            }
             @include respond(phone) {
                 top: 33rem;
                 right: 3.1rem;
@@ -80,6 +98,10 @@
                 outline: 1.5rem solid $color-tertiary;
             }
 
+            @include respond(tab-port) {
+                top: 29rem;
+                left: 30%;
+            }
             @include respond(phone) {
                 top: 40rem;
                 left: 10.5rem;
