@@ -26,9 +26,9 @@
   animation: spinRight 1.3s ease-in;
 
   @include respond(tab-land) {
-    transform: rotate(-15deg) translate(-50%, -50%) scale(.9); 
+    transform: rotate(-15deg) translate(-50%, -50%) scale(1); 
     position: absolute;
-    top: 35%;
+    top: 40%;
     left: 37%;
   }
   

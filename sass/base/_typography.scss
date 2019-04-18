@@ -42,6 +42,13 @@
 .paragraph {
     font-size: $default-font-size;
     
+    @include respond(tab-land) {
+        font-size: 3rem;
+        text-align: center;
+
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
     @include respond(tab-port) {
         font-size: 3.4rem;
         text-align: center;

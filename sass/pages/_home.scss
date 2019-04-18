@@ -5,6 +5,11 @@
     min-height: 95vh;
     
 
+    @include respond(tab-land) {
+        
+
+        min-height: 65vh;
+    }
     @include respond(tab-port) {
         position: relative;
         padding: 4rem 0 9rem 0;

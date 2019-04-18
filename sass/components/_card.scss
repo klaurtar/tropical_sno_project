@@ -1,6 +1,6 @@
 #floatingCards {
     background: url('/images/tropicalSnoLeafBlue.png') center center/cover no-repeat;
-    height: 110vh;
+    height: 90rem;
     color: rgba($color-tertiary, 0.8);
     margin-top: -9.5rem;
     padding-top: 13rem;
@@ -15,7 +15,7 @@
   }
   
   @include respond(phone) {
-    height: 180rem;
+    height: 175rem;
 
     width: 100%;
     margin-top: -2.5rem;
@@ -111,8 +111,10 @@
       top: -32rem;
     }
     @include respond(phone) {
+      width: 100%;
       top: 0;
       height: 34rem;
+      left: 0;
     }
   }
   #floatingTwoBack {
@@ -125,8 +127,10 @@
       top: -39rem;
     }
     @include respond(phone) {
+      width: 100%;
       top: 1.5rem;
       height: 38rem;
+      left: 0;
     }
   }
   #floatingThreeBack {
@@ -139,8 +143,10 @@
       top: -23rem;
     }
     @include respond(phone) {
+      width: 100%;
       top: 1rem;
       height: 40rem;
+      left: 0;
     }
   }
   
@@ -157,6 +163,9 @@
     }
     @include respond(phone) {
       top: -6rem;
+      width: 100%!important;
+      left: 0;
+      top: 0;
     }
 
   }
@@ -171,7 +180,9 @@
       top: -39rem;
     }
     @include respond(phone) {
-      top: -3rem;
+      top: 0rem;
+      width: 100%;
+      left: 0;
     }
 
   }
@@ -186,7 +197,9 @@
       top: -23rem;
     }
     @include respond(phone) {
-      top: 4rem;
+      top: 0rem;
+      width: 100%;
+      left: 0;
     }
 
   }
