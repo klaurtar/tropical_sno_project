@@ -736,7 +736,8 @@ select {
   background: url("https://www.tropicalsno.com/wp-content/uploads/2019/02/Banner-1-2-t-768x420.png") center/cover no-repeat, linear-gradient(to right, rgba(179, 233, 50, 0.8), rgba(142, 212, 221, 0.8), rgba(244, 152, 66, 0.8));
   min-height: 95vh;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
   @media (max-width: 37.5em) {
     #showcase {
       z-index: 300; } }
