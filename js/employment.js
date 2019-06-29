@@ -45,7 +45,7 @@ var schedule = (function() {
     if(month > 1 && month < 4) {
         hoursDialogue(dialogList.duringSchool);
         hoursWeekendDialogue(dialogList.weekend);
-    } else if(month > 5 && month < 9 ){
+    } else if(month > 4 && month < 9 ){
         hoursDialogue(dialogList.afterSchool);
         hoursWeekendDialogue(dialogList.afterSchool);
     } else {
