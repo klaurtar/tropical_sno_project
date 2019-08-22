@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="description" content="R&M Tropical Sno's official website!">
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph Protocol -->
+    <meta property="og:title" content="R&M Tropical Sno" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="The best shaved ice in the midwest!" />
+    <meta property="og:url" content="http://www.trosnorocks.com" />
+    <meta property="og:image" content="https://www.tropicalsno.com/wp-content/uploads/2019/02/Banner-1-2-t-768x420.png" />
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/stylesheets/main.css">
+
+    <style>
+        html, body, .row {
+            height: 100vh;
+        }
+    </style>
+
+    <title>Tropical Sno</title>
+</head>
+<body>
+        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-custom">
+                <a class="navbar-brand" href="#"><i class="fas fa-snowflake"></i> R&M Tropical Sno</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#locations">Locations</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#flavors">Flavors</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav> -->
+  <div class="navigation">
+    <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+    <label for="navi-toggle" class="navigation__button">
+      <span class="navigation__icon">&nbsp;</span>
+    </label>
+
+    <div class="navigation__background">&nbsp;</div>
+
+    <nav class="navigation__nav">
+      <ul class="navigation__list">
+        <li class="navigation__item"><a href="/#showcase" class="navigation__link"><span>1</span>Home</a></li>
+        <li class="navigation__item"><a href="/#locations" class="navigation__link"><span>2</span>Locations</a></li>
+        <li class="navigation__item"><a href="/#flavors" class="navigation__link"><span>3</span>Flavors</a></li>
+        <li class="navigation__item"><a href="/#floatingCards" class="navigation__link"><span>4</span>Sizes</a></li>
+        <li class="navigation__item"><a href="/#socialMedia" class="navigation__link"><span>5</span>Social Media</a></li>
+        <li class="navigation__item"><a href="/employment" class="navigation__link"><span>6</span>Employment</a></li>
+        <li class="navigation__item"><a href="/admin" class="navigation__link"><span>7</span>Log In</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  
+    <div class="successAlert">
+        <%= message %>
+    </div>
+
+
+    <section class="dashboard">
+            <div class="container">
+                <div class="row justify-content-center align-items-center text-center">
+                 <div class="col-lg-4">
+                   <a href="/admin">
+                    <div class="outline">
+                        <p><i class="fas fa-users"></i></p>
+                        <p class="subHead">Applicants</p>
+                    </div>
+                   </a>
+                 </div>
+                 <div class="col-lg-4 marginNegative">
+                   <a href="/register">
+                    <div class="outline">
+                        <p><i class="fas fa-cash-register"></i></p>
+                        <p class="subHead">Register Admin</p>
+                    </div>
+                  </a>
+                 </div>
+                 <div class="col-lg-4 marginNegative">
+                   <a href="/viewAdmins">
+                    <div class="outline">
+                        <p><i class="fas fa-users-cog"></i></p>
+                        <p class="subHead">View Admins</p>
+                    </div>
+                  </a>
+                 </div>
+                </div>
+                 
+                 
+             </div>
+            </div>
+         </section>
+
+</body>
+</html>

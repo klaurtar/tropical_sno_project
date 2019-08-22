@@ -1,0 +1,41 @@
+.dashboard {
+    
+    div.dashboardIcon {
+        height: 50vh;
+        width: 30%;
+        background-color:lightgray;
+        border-radius: 15px;
+
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    #dashCard {
+        padding-top: 15%;
+    }
+
+    p{
+        font-size: 8rem;
+    }
+
+    .subHead {
+        font-size: 5rem;
+
+        @include respond(phone) {
+            font-size: 4rem;
+        } 
+    }
+
+    .outline {
+        border: 2px solid lightgrey;
+        border-radius: 15px;
+        
+    }
+
+    .marginNegative {
+        @include respond(phone) {
+            margin-top: -19rem;
+        }
+    }
+}

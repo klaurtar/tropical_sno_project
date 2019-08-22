@@ -1,0 +1,42 @@
+.section-admin {
+    h2 {
+        text-align: center;
+        font-size: 4rem;
+        margin-bottom: 3rem;
+    }
+
+    .seperator{
+        border: 1px solid lightblue;
+        float: left;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 2rem;
+
+        padding: 2rem;
+
+        height: 20%;
+        width: 30%;
+    }
+
+    p {
+        font-size: 2rem;
+    }
+    .admins {
+        font-size: 4rem;
+    }
+
+    button {
+        height: 80%;
+    }
+
+    .outline {
+        border: 2px solid lightgrey;
+        border-radius: 15px;
+        margin-top: 5rem;
+    }
+
+    .icon {
+        font-size: 3rem;
+    }
+}
+

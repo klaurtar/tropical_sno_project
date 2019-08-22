@@ -1,0 +1,26 @@
+<% include ../partials/header %>
+    <section class="section-admin">
+        <h2 style="display: block;" class="u-center-text">Applicants</h2>
+
+        
+            <div class="container">
+                <div class="row">
+                    
+                        <% applicants.reverse().forEach(function(applicant){ %>
+                        <div class="col-lg-4">
+                                <p class="u-center-text"><a href="/admin/<%= applicant._id %>"><%= applicant.firstName %> <%= applicant.middleInitial %> <%= applicant.lastName %></a></p>
+                        </div>
+                    
+                        <% }) %> 
+
+                </div>
+            </div>
+
+               
+
+    </section>
+
+
+
+</body>
+</html>

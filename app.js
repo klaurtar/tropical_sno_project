@@ -1,24 +1,32 @@
-var express = require('express');
-var mongoose = require('mongoose');
-var bodyParser = require('body-parser');
-var Applicant = require('./models/applicants');
-var sendAppliedEmail = require('./mail/index.js');
-var session = require('express-session');
-var cookieParser = require('cookie-parser');
-var flash = require('connect-flash');
+const express = require('express');
+const mongoose = require('mongoose');
+const passport = require('passport');
+const LocalStrategy = require('passport-local');
+const passportLocalMongoose = require('passport-local-mongoose');
+const bodyParser = require('body-parser');
+const Applicant = require('./models/applicants');
+const Admin = require('./models/admin');
+const sendAppliedEmail = require('./mail/index.js');
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+const flash = require('connect-flash');
+const methodOverride = require('method-override');
 
-var app = express();
+const app = express();
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + "/public"));
 app.use(express.static(__dirname + '/js'));
-var port = process.env.PORT || 3000;
+
+app.use(methodOverride('_method'));
+
+const port = process.env.PORT || 3000;
 
 
-var uri = "mongodb+srv://klaurtar:Helloryan1@cluster0-nakj7.mongodb.net/test?retryWrites=true";
+const uri = "mongodb+srv://klaurtar:Helloryan1@cluster0-nakj7.mongodb.net/test?retryWrites=true";
 
 
 mongoose.connect(uri, {useNewUrlParser: true});
-var db = mongoose.connection;
+const db = mongoose.connection;
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(cookieParser('secret'));
@@ -33,6 +41,13 @@ app.use((req, res, next) => {
     res.locals.message = req.flash('success');
     next();
   });
+
+//Passport Setup
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategy(Admin.authenticate()));
+passport.serializeUser(Admin.serializeUser());
+passport.deserializeUser(Admin.deserializeUser());
 // Applicant.create({
     // firstName: 'Ryan',
     // middleInitial: 'L',
@@ -44,6 +59,10 @@ app.use((req, res, next) => {
     // phoneNumber: '6364842273',
     // text: false
 //     });
+// Admin.create({
+//     email: 'klaurtar@gmail.com',
+//     password: ''
+// });
 
 app.get('/', function(req, res){
     res.render('index');
@@ -54,18 +73,18 @@ app.get('/employment', function(req, res){
 });
 
 app.post('/employment', function(req, res){
-    // var firstName = req.body.firstName;
-    // var middleInitial = req.body.middleInitial;
-    // var lastName = req.body.lastName;
-    // var address = req.body.address;
-    // var city = req.body.city;
-    // var state = req.body.state;
-    // var zipCode = req.body.zipCode;
-    // var phoneNumber = req.body.phoneNumber;
-    // var doYouRecieveText = req.body.doYouRecieveText;
+    // const firstName = req.body.firstName;
+    // const middleInitial = req.body.middleInitial;
+    // const lastName = req.body.lastName;
+    // const address = req.body.address;
+    // const city = req.body.city;
+    // const state = req.body.state;
+    // const zipCode = req.body.zipCode;
+    // const phoneNumber = req.body.phoneNumber;
+    // const doYouRecieveText = req.body.doYouRecieveText;
     
-    var newApplicant = req.body;
-    // var newApplicant = {
+    const newApplicant = req.body;
+    // const newApplicant = {
     //     firstName: firstName,
     //     middleInitial: middleInitial,
     //     lastName: lastName,
@@ -89,6 +108,104 @@ app.post('/employment', function(req, res){
         }
     });
 });
+
+
+app.get("/dashboard", isLoggedIn, function(req, res) {
+    res.render("dashboard");
+});
+
+app.get("/admin", isLoggedIn, function(req, res){
+    Applicant.find({}, function(err, applicants){
+      if(err){
+        console.log(err);
+      } else {
+        res.render("admin", {applicants: applicants});
+      }
+    });
+  });
+
+//SHOW APPLICANT ROUTE
+app.get("/admin/:id", isLoggedIn, function(req, res){
+    Applicant.findOne({_id: req.params.id}, function(err, foundApplicant) {
+        if(err) {
+            res.redirect('/admin');
+        } else {
+            res.render("show", {applicant: foundApplicant});
+        }
+    })
+  });
+
+//DELETE BLOG ROUTE
+app.delete("/admin/:id", isLoggedIn, function(req, res){
+    //DESTROY Applicant
+    Applicant.findOneAndRemove({_id: req.params.id}, function(err){
+        if(err){
+            res.redirect("/admin");
+        } else {
+            res.redirect("/admin");
+        }
+    })
+  });
+
+  //AUTH ROUTES
+app.get("/register", isLoggedIn, function(req, res) {
+    res.render("register");
+});
+
+app.post("/register", isLoggedIn, function(req, res) {
+    var newAdmin = new Admin({username: req.body.username});
+    Admin.register(newAdmin, req.body.password, function(err, admin) {
+        if(err) {
+            console.log(err);
+            return res.render("register");
+        }
+        passport.authenticate("local")(req, res, function() {
+            res.redirect("/dashboard");
+        });
+    });
+});
+
+app.get("/viewadmins", function(req, res) {
+    Admin.find({}, function(err, admins){
+      if(err){
+        console.log(err);
+      } else {
+        res.render("viewadmins", {admins: admins});
+      }
+    });
+});
+
+app.delete("/viewadmins/:id", isLoggedIn, function(req, res){
+    //DESTROY Applicant
+    Admin.findOneAndRemove({_id: req.params.id}, function(err){
+        if(err){
+            res.redirect("/viewadmins");
+        } else {
+            res.redirect("/viewadmins");
+        }
+    })
+  });
+
+app.get("/login", function(req, res) {
+    res.render('login');
+});
+
+app.post("/login", passport.authenticate("local", 
+    {
+        successRedirect: "/dashboard",
+        failureRedirect: "/login"
+    }), function(req, res) {
+    
+});
+
+//Middleware
+function isLoggedIn(req, res, next) {
+    if(req.isAuthenticated()) {
+        return next();
+    } else {
+        res.redirect("/login");
+    }
+}
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);

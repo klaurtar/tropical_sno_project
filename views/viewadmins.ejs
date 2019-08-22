@@ -1,0 +1,29 @@
+<% include ../partials/header %>
+    <section class="section-admin">
+        <h2 style="display: block;" class="u-center-text mb-5 mt-5">Admins</h2>
+
+        
+            <div class="container">
+                <div class="row mb-5 ">
+                    
+                        <% admins.slice(1).forEach(function(admin){ %>
+                        <div class="col-12 outline d-flex justify-content-around outline align-items-center">
+                                <p class="u-center-text admins"><%= admin.username %></p>
+                                <form action="/viewadmins/<%= admin._id %>?_method=DELETE" method="POST">
+                                    <button class="btn btn-danger"><i class="fas fa-trash icon"></i></button>
+                                </form>
+                        </div>
+                    
+                        <% }) %> 
+
+                </div>
+            </div>
+
+               
+
+    </section>
+
+
+
+</body>
+</html>

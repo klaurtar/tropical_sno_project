@@ -1,0 +1,62 @@
+<% include ../partials/header %>
+<div class="container">
+        <p id="fullName" class="col-8 text-center"><%= applicant.firstName.toUpperCase() %> <%= applicant.middleInitial.toUpperCase() %> <%= applicant.lastName.toUpperCase() %></p>
+
+    <div class="row board">
+        
+            <div class="col-lg-4 text-center mb-5">
+                <p>Address: <%= applicant.address %></p>
+                <p>City: <%= applicant.city %></p>
+                <p>Zip Code: <%= applicant.zipCode %></p>
+                <p>Phone Number: <%= applicant.phoneNumber %></p>
+                <p>Do You Recieve Text: <%= applicant.doYouRecieveText %></p>
+                <p>Entitled to Work in US: <%= applicant.entitledToWorkInUs %></p>
+                <p>Sixteen or Over: <%= applicant.sixteenOrOver %></p>
+                <p>Felony Conviction: <%= applicant.felonyConviction %></p>
+                <p>Conviction Reason: <%= applicant.convictionExplained %></p>
+                <p>Date You Can Begin Working: <%= applicant.dateYouCanBeginWorking %></p>
+            </div>
+            <div class="col-lg-4 text-center mb-5">
+                <p>Employer: <%= applicant.employer %></p>
+                <p>Address (Work): <%= applicant.addressWork %></p>
+                <p>City (Work): <%= applicant.cityWork %></p>
+                <p>State (Work): <%= applicant.stateWork %></p>
+                <p>Zip Code (Work): <%= applicant.zipCodeWOrk %></p>
+                <p>Phone Number (Work): <%= applicant.phoneNumberWork %></p>
+                <p>Supervisor Name: <%= applicant.supervisorName %></p>
+                <p>Start Date: <%= applicant.startDate %></p>
+                <p>End Date: <%= applicant.endDate %></p>
+                <p>Job Title: <%= applicant.jobTitle %></p>
+                <p>Pay Rate: <%= applicant.payRate %></p>
+                <p>Leave Reason: <%= applicant.leaveReason %></p>
+                <p>Contact Them: <%= applicant.contactThem %></p>
+            </div>
+            <div class="col-lg-4 text-center mb-5"> 
+                <p>Monday: <%= applicant.monday %></p>
+                <p>Tuesday: <%= applicant.tuesday %></p>
+                <p>Wednesday: <%= applicant.wednesday %></p>
+                <p>Thursday: <%= applicant.thursday %></p>
+                <p>Friday: <%= applicant.friday %></p>
+                <p>Saturday: <%= applicant.saturday %></p>
+                <p>Sunday: <%= applicant.sunday %></p>
+                <p>Days Not Available: <%= applicant.daysNotAvailableToWork %></p>
+                <p>Location Applied For: <%= applicant.locationAppliedFor %></p>
+                <p>Date Applied: <%= applicant.dateApplied %></p>
+            </div>
+        
+            <div class="col-6 text-center">
+                <a href="/admin"><button class="backButton">Back</button></a>
+            </div>
+            <div class="col-6 text-center">
+                <!-- <a href=""><button class="deleteButton">Delete</button></a> -->
+                <form action="/admin/<%= applicant._id %>?_method=DELETE" method="POST">
+                    <button class="deleteButton"><i class="far fa-trash-alt"></i> <span class="d-none">Applicant</span></button>
+                </form>
+            </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>
