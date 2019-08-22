@@ -48,21 +48,7 @@ app.use(passport.session());
 passport.use(new LocalStrategy(Admin.authenticate()));
 passport.serializeUser(Admin.serializeUser());
 passport.deserializeUser(Admin.deserializeUser());
-// Applicant.create({
-    // firstName: 'Ryan',
-    // middleInitial: 'L',
-    // lastName: 'Talbert',
-    // address: '710 La Marite Dr.',
-    // city: 'Manchester',
-    // state: 'Missouri',
-    // zipCode: '63021',
-    // phoneNumber: '6364842273',
-    // text: false
-//     });
-// Admin.create({
-//     email: 'klaurtar@gmail.com',
-//     password: ''
-// });
+
 
 app.get('/', function(req, res){
     res.render('index');
@@ -165,7 +151,7 @@ app.post("/register", isLoggedIn, function(req, res) {
     });
 });
 
-app.get("/viewadmins", function(req, res) {
+app.get("/viewadmins", isLoggedIn, function(req, res) {
     Admin.find({}, function(err, admins){
       if(err){
         console.log(err);
