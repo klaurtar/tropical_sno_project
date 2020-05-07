@@ -21,11 +21,12 @@ var schedule = (function() {
     
     //Use month method on Date object
     month = today.getMonth();
+    console.log(month);
 
     //Create dialog strings
     dialogList = {
         weekend: ' 2pm to 9pm',
-        duringSchool: ' 5pm to 9pm',
+        duringSchool: ' 2pm to 9pm',
         afterSchool: ' 2pm to 10pm'
     };
 
@@ -42,10 +43,10 @@ var schedule = (function() {
         })
     };
 
-    if(month > 1 && month < 4) {
+    if(month > 1 && month <= 4) {
         hoursDialogue(dialogList.duringSchool);
         hoursWeekendDialogue(dialogList.weekend);
-    } else if(month > 4 && month < 9 ){
+    } else if(month >= 5 && month <= 9 ){
         hoursDialogue(dialogList.afterSchool);
         hoursWeekendDialogue(dialogList.afterSchool);
     } else {
