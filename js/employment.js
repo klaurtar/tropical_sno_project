@@ -25,7 +25,7 @@ var schedule = (function() {
     //Create dialog strings
     dialogList = {
         weekend: ' 2pm to 9pm',
-        duringSchool: ' 5pm to 9pm',
+        duringSchool: ' 2pm to 9pm',
         afterSchool: ' 2pm to 10pm'
     };
 
